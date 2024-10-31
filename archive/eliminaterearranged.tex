@@ -1,0 +1,141 @@
+% Elimination worksheet
+
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage[margin=12mm]{geometry}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol} % For multi-column layout
+\usepackage{mdframed} % For framed boxes
+
+% Define the new elimination command
+\newcommand{\elimination}[6]{%
+    % #1 = constant1, #2 = constant2, #3 = x-coeff1, #4 = x-coeff2, #5 = y-coeff1, #6 = y-coeff2
+    % Compute constants c and p based on given coefficients and x, y values
+    \pgfmathsetmacro{\cval}{#3*#1 + #5*#2} % c = a*constant1 + b*constant2
+    \pgfmathsetmacro{\pval}{#4*#1 + #6*#2} % p = d*constant1 + e*constant2
+
+    % Format coefficients (removing 1 or -1)
+    \def\formata{%
+        \ifnum#3=1
+            x
+        \else\ifnum#3=-1
+            -x
+        \else
+            \pgfmathprintnumber{#3}x
+        \fi\fi}
+
+    \def\formatb{%
+        \ifnum#5=1
+            +y
+        \else\ifnum#5=-1
+            -y
+        \else
+            \ifnum#5<0 \pgfmathprintnumber{#5}y \else +\pgfmathprintnumber{#5}y \fi
+        \fi\fi}
+
+    \def\formatd{%
+        \ifnum#4=1
+            x
+        \else\ifnum#4=-1
+            -x
+        \else
+            \pgfmathprintnumber{#4}x
+        \fi\fi}
+
+    \def\formate{%
+        \ifnum#6=1
+            +y
+        \else\ifnum#6=-1
+            -y
+        \else
+            \ifnum#6<0 \pgfmathprintnumber{#6}y \else +\pgfmathprintnumber{#6}y \fi
+        \fi\fi}
+
+    % Display equations in aligned format without braces
+    \[
+    \begin{aligned}
+    \formata \formatb &= \pgfmathprintnumber{\cval} \\[-1pt]
+    \formatd \formate &= \pgfmathprintnumber{\pval}
+    \end{aligned}
+    \]
+}
+
+\begin{document}
+
+\section*{Simultaneous Equations - Elimination by Addition}
+
+\begin{mdframed}[backgroundcolor=gray!20, roundcorner=5pt] % Light grey background with rounded corners
+\begin{multicols}{2}
+\begin{enumerate}
+    \item Multiply one or both equations if needed.
+    \item Add or subtract to eliminate one variable.
+    \item Solve for the remaining variable.
+    \item Substitute back to find the second variable.
+    \item Present solution as  \((x, y) = (2, 3)\) etc.
+    \item Check solution in both original equations.
+\end{enumerate}
+\end{multicols}
+\end{mdframed}
+
+\newcommand{\verticalspace}{\vspace{21mm}} 
+
+\large
+% Define the question with two columns
+\begin{questions}
+
+% 1
+\question Eliminate the opposite terms by addition
+\begin{multicols}{2} % Start three-column layout
+\begin{parts}
+
+\part \elimination{2}{3}{3}{5}{1}{-1} \verticalspace
+\part \elimination{3}{4}{4}{6}{1}{-1} \verticalspace
+\part \elimination{4}{-5}{1}{-1}{4}{3} \verticalspace
+\part \elimination{-2}{-3}{3}{4}{1}{-1} \verticalspace
+
+\end{parts}
+\end{multicols}
+
+% 2
+\question Eliminate opposite terms by addition
+\begin{multicols}{2} % Start three-column layout
+\begin{parts}
+
+\part \elimination{2}{3}{3}{5}{4}{-4} \verticalspace
+\part \elimination{4}{1}{2}{6}{5}{-5} \verticalspace
+\part \elimination{7}{-2}{4}{2}{3}{-3} \verticalspace
+\part \elimination{-1}{-2}{3}{1}{2}{-2} \verticalspace
+
+\end{parts}
+\end{multicols}
+\newpage
+\renewcommand{\verticalspace}{\vspace{35mm}} 
+% 3
+\question Multiply One Equation and continue
+\begin{multicols}{2} % Start three-column layout
+\begin{parts}
+
+\part \elimination{4}{3}{3}{2}{2}{-1} \verticalspace
+\part \elimination{5}{2}{4}{3}{3}{-1} \verticalspace
+\part \elimination{2}{4}{5}{3}{1}{-1} \verticalspace
+\part \elimination{3}{1}{3}{-6}{2}{5} \verticalspace
+
+\end{parts}
+\end{multicols}
+
+% 4
+\question Multiply both equations and continue
+\begin{multicols}{2} % Start three-column layout
+\begin{parts}
+
+\part \elimination{4}{3}{2}{3}{3}{-5} \verticalspace
+\part \elimination{5}{2}{3}{4}{2}{-3} \verticalspace
+\part \elimination{2}{4}{4}{2}{7}{-5} \verticalspace
+\part \elimination{3}{1}{2}{4}{5}{-3} \verticalspace
+
+\end{parts}
+\end{multicols}
+\end{questions}
+
+\end{document}

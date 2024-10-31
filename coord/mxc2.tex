@@ -1,0 +1,55 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{geometry}
+\usepackage{graphicx} % Required for \scalebox
+
+% Define the linesegment command
+\newcommand{\linesegment}[2]{% Arguments: #1=y-intercept, #2=x-intercept
+\begin{tikzpicture}
+    % Draw a grid of size 5x5 in the first quadrant
+    \draw[step=1cm, gray, very thin] (0,0) grid (5,5);
+    \draw[thick, ->] (0,0) -- (5,0) node[right] {$x$}; % x-axis
+    \draw[thick, ->] (0,0) -- (0,5) node[above] {$y$}; % y-axis
+    
+    % Plot the line segment from (0, y-intercept) to (5, x-intercept)
+    \draw[black, thick] (0,#1) -- (5,#2);
+
+    % Add endpoints
+    \filldraw [black] (0,#1) circle (2pt); % Endpoint at y-intercept
+    \filldraw [black] (5,#2) circle (2pt); % Endpoint at x-intercept
+\end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+ \textbf{Slope} is the \textit{steepness} of a line segment. It measures how much a line rises vertically between two points in a horizontal run. We learn to use a \textbf{slope triangle} to calculate slope values.
+
+There are four types of slope: Positive, Negative, Zero, and Undefined Slope.
+
+In this lesson, we look at \textbf{Positive Slopes}. Line segments that rise from left to right are also called \textit{increasing line segments}. 
+
+To express slope mathematically, we use the formula:
+\[ \text{slope} (m) = \frac{\text{rise}}{\text{run}} \]
+Here, the slope is denoted by the variable letter \(m\). The scale is one box is 1 unit.
+\end{mdframed}
+
+\begin{questions}
+
+\question Find the slope using the rise and run?
+\begin{multicols}{3}
+\begin{parts}
+\part \scalebox{0.7}{\linesegment{1}{3}}  % y-intercept = 1, x-intercept = 3
+\part \scalebox{0.7}{\linesegment{2}{4}}  % y-intercept = 2, x-intercept = 4
+\part \scalebox{0.7}{\linesegment{0}{2}}  % y-intercept = 0, x-intercept = 2
+\part \scalebox{0.7}{\linesegment{3}{5}}  % y-intercept = 3, x-intercept = 5
+\part \scalebox{0.7}{\linesegment{4}{1}}  % y-intercept = 4, x-intercept = 1
+\part \scalebox{0.7}{\linesegment{5}{0}}  % y-intercept = 5, x-intercept = 0
+\end{parts}
+\end{multicols}
+
+\end{questions}
+
+\end{document}

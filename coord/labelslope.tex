@@ -1,0 +1,29 @@
+\newcommand{\labelslope}[6]{% Arguments: #1=grid width, #2=grid height, #3=xstart, #4=ystart, #5=xend, #6=yend
+\begin{tikzpicture}
+    % Draw a grid with size specified by #1 x #2
+    \draw[step=1cm, gray, very thin] (0,0) grid (#1,#2);
+    
+    % Plot the line segment from (xstart, ystart) to (xend, yend)
+    \draw[black, thick] (#3,#4) -- (#5,#6);
+    
+    % Calculate the horizontal (run) and vertical (rise) distances
+    \pgfmathsetmacro{\run}{#5-#3}
+    \pgfmathsetmacro{\rise}{#6-#4}
+    
+    % Draw the horizontal leg and label it
+    \ifdim\run pt=0pt\else % Only draw if run is non-zero
+        \draw[black, thick] (#3,#4) -- (#5,#4);
+        \draw (#3,#4) -- (#5,#4) node[midway,below] {\large $\pgfmathprintnumber{\run}$};
+    \fi
+    
+    % Draw the vertical leg and label it
+    \ifdim\rise pt=0pt\else % Only draw if rise is non-zero
+        \draw[black, thick] (#5,#4) -- (#5,#6);
+        \draw (#5,#4) -- (#5,#6) node[midway,right] {\large $\pgfmathprintnumber{\rise}$};
+    \fi
+    
+    % Add endpoints
+    \filldraw [black] (#3,#4) circle (2pt); % Endpoint at starting point
+    \filldraw [black] (#5,#6) circle (2pt); % Endpoint at ending point
+\end{tikzpicture}
+}

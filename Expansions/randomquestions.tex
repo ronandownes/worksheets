@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\date{}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=2mm, bottom=15mm, left=15mm, right=15mm]{geometry}
+\newcommand{\bm}[1]{\begin{multicols}{#1}} % Shortcut for \begin{multicols}{x}
+ 
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+% Define the \expandbinomials command
+\input{commands}
+
+\newcommand{\randcoeff}{% Command to generate random coefficients
+    \pgfmathtruncatemacro{\temp}{random(-13,13)}%
+    \ifnum\temp=0 \randcoeff \else\temp\fi% Avoid zero coefficients
+}
+
+\newcommand{\formatcoeff}[1]{% Format coefficient, omit if 1 or -1
+    \ifnum#1=1 x \else \ifnum#1=-1 -x \else #1x \fi \fi%
+}
+
+\newcommand{\randexp}{%
+    \pgfmathtruncatemacro{\a}{\randcoeff}%
+    \pgfmathtruncatemacro{\b}{\randcoeff}%
+    \pgfmathtruncatemacro{\c}{\randcoeff}%
+    \formatcoeff{\a}(\formatcoeff{\b} \pgfmathparse{sign(\c)==-1 ? '' : '+'}\pgfmathresult \c)%
+}
+
+\newcommand{\randquadexp}{% Example for quadratic expression
+    \pgfmathtruncatemacro{\d}{\randcoeff}%
+    \pgfmathtruncatemacro{\e}{\randcoeff}%
+    \pgfmathtruncatemacro{\f}{\randcoeff}%
+    \formatcoeff{\d}(\formatcoeff{\e}^2 \pgfmathparse{sign(\f)==-1 ? '' : '+'}\pgfmathresult \f)%
+}
+
+
+
+
+
+
+
+
+
+
+\title{Monomial, Binomial, and Quadratic Expansions: \(a(bx\pm c)\), \(a(bx^2 \pm cx \pm d)\), and \(ax(bx\pm c)\)}
+
+
+\newcommand{\vs}{\vspace{26mm}} 
+
+\begin{document}
+\vspace{-22mm}
+\maketitle
+
+\begin{questions}
+\Large
+\question   
+
+
+\end{questions}
+
+\end{document}

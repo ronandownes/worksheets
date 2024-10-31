@@ -1,0 +1,175 @@
+\documentclass[12pt, a4paper]{exam}
+
+\usepackage{fontawesome5} % For the fire icon
+\usepackage{multicol}
+\usepackage{pgfmath} % For random number generation
+\usepackage{amsmath} % For improved math commands
+\usepackage[margin=7mm]{geometry}
+% Title definition with fire symbol
+\newcommand{\givetitle}{\begin{center} \Large Solve and Sketch \( x^2\pm Bx \pm C =0\) By Factor Method  - Hottest Exam Topic \faFire \end{center}}
+
+% Define the monic quadratic function with correct sign handling
+\newcommand{\monicquad}[2]{%
+    x^2%
+    \ifnum\numexpr#1+#2>0 + \the\numexpr#1+#2\relax \else \ifnum\numexpr#1+#2<0 \the\numexpr#1+#2\relax \fi\fi%
+    \ifnum\numexpr#1+#2=0 \else x\fi%
+    \ifnum\numexpr#1*#2>0 + \the\numexpr#1*#2\relax \else \ifnum\numexpr#1*#2<0 \the\numexpr#1*#2\relax \fi\fi%
+}
+
+\date{}
+\pagestyle{empty}
+
+% Custom vertical spacing commands
+\newcommand{\tinyspace}{\vspace{2mm}}
+\newcommand{\scriptsizespace}{\vspace{4mm}}
+\newcommand{\footnotesizespace}{\vspace{12mm}}
+\newcommand{\largespace}{\vspace{19mm}}
+\newcommand{\Largespace}{\vspace{44mm}}
+\newcommand{\LARGEspace}{\vspace{54mm}}
+\newcommand{\hugespace}{\vspace{64mm}}
+\newcommand{\Hugespace}{\vspace{84mm}}
+
+\begin{document}
+
+% Print the title with fire icon
+\givetitle
+
+\begin{questions}
+\question 
+$x^2 + x +c$ \quad
+ $(x + \hspace{11} )(x+\hspace{11} )$  factors \quad
+root $x= - $ or \(-\)   \quad
+parabola totally to the left
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{1}{7}$ 
+    \part $\monicquad{1}{5}$ 
+    \part $\monicquad{1}{8}$ 
+\end{multicols}\Largespace
+\begin{multicols}{3}
+    \part $\monicquad{2}{5}$ 
+    \part $\monicquad{2}{7}$ 
+    \part $\monicquad{5}{7}$ 
+\end{multicols}
+\end{parts}
+
+\Largespace
+
+\question 
+$x^2 - x +c$ \quad
+ $(x - \hspace{11} )(x-\hspace{11} )$  factors \quad
+root \(x= +\) or \(+\)   \quad
+parabola totally to the right
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{-1}{-7}$  
+    \part $\monicquad{-1}{-5}$ 
+    \part $\monicquad{-9}{-1}$ 
+\end{multicols}\Largespace
+\begin{multicols}{3}
+    \part $\monicquad{-3}{-5}$ 
+    \part $\monicquad{-3}{-11}$ 
+    \part $\monicquad{-2}{-9}$ 
+\end{multicols}
+\end{parts}
+
+\Largespace
+
+\newpage
+\vspace{-9mm}
+\question 
+$x^2 - x -c$ \quad
+ $(x+\text{small} )(x - \text{big} )$  \quad
+roots -small +big
+parabola shifted to the left
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{1}{-7}$  
+    \part $\monicquad{1}{-5}$ 
+    \part $\monicquad{-9}{1}$ 
+\end{multicols}\Largespace
+\begin{multicols}{3}
+    \part $\monicquad{3}{-5}$ 
+    \part $\monicquad{3}{-11}$ 
+    \part $\monicquad{2}{-9}$ 
+\end{multicols}
+\end{parts}
+
+\largespace
+
+\question 
+$x^2 + x -c$ \quad
+ $(x+\text{big} )(x - \text{small} )$  \quad
+roots -big +small
+parabola shifted to the left
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{-1}{7}$ 
+    \part $\monicquad{-1}{5}$ 
+    \part $\monicquad{-1}{8}$ 
+\end{multicols}\Largespace
+\begin{multicols}{3}    
+    \part $\monicquad{-2}{5}$ 
+    \part $\monicquad{-2}{7}$ 
+    \part $\monicquad{-5}{7}$ 
+\end{multicols}
+\end{parts}
+
+\largespace
+
+\footnotesize
+\question Homework exercises
+\begin{parts}
+\begin{multicols}{4}
+    \part $\monicquad{1}{7}$ 
+    \part $\monicquad{1}{4}$  
+    \part $\monicquad{2}{4}$  
+    \part $\monicquad{5}{3}$ 
+
+    \end{multicols}
+\begin{multicols}{4}
+
+
+    \part $\monicquad{-1}{-9}$ 
+    \part $\monicquad{-1}{-12}$  
+    \part $\monicquad{-1}{-4}$  
+    \part $\monicquad{-3}{-5}$ 
+
+        \end{multicols}
+\begin{multicols}{4}
+
+
+    \part $\monicquad{-3}{-12}$  
+    \part $\monicquad{-7}{-4}$ 
+    \part $\monicquad{-1}{6}$  
+    \part $\monicquad{-1}{3}$ 
+
+        \end{multicols}
+\begin{multicols}{4}
+
+
+    \part $\monicquad{-1}{11}$ 
+    \part $\monicquad{-2}{12}$ 
+    \part $\monicquad{-3}{6}$ 
+    \part $\monicquad{1}{-8}$ 
+
+        \end{multicols}
+\begin{multicols}{4}
+
+
+    \part $\monicquad{3}{-14}$  
+    \part $\monicquad{-11}{3}$
+        \part $\monicquad{-5}{1}$  
+    \part $\monicquad{15}{2}$
+\end{multicols}
+\end{parts}
+
+\Largespace
+
+\end{questions}
+
+\end{document}

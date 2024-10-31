@@ -1,0 +1,138 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{The Derivative of a Function and Vertex Form of a Quadratic}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ts}{\vspace{6 mm}}
+\newcommand{\ms}{\vspace{11 mm}}
+\newcommand{\bs}{\vspace{14mm}}
+\newcommand{\ls}{\vspace{33 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+
+% A command to draw a quadratic function in vertex form y = a(x - h)^2 + k with limits -6 to 6 on x-axis
+\newcommand{\plotquadratic}[4]{%
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = $x$, ylabel = $y$,
+        grid = both,
+        width=8cm, height=6cm,
+        xmin=-6, xmax=6, ymin=-10, ymax=10,
+        samples=100
+    ]
+    \addplot [domain=-6:6, thick, color=blue] {#1*(x - #2)^2 + #3};
+    \node at (axis cs:#2,#3)[pin=above:{Turning Point: (#2,#3)}] {};
+    \end{axis}
+\end{tikzpicture}
+}
+
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+\vspace{-28mm}
+
+\begin{questions}
+
+\question Learning intentions: Recall, understand, and apply the following:
+
+\begin{parts}
+\part Find the turning point of a curve
+\part Find the second derivative
+\part Use the first derivative to find turning points
+\part Use the second derivative to find the nature of turning points
+\end{parts}
+
+\large
+
+% Vertex form and turning points
+\question For each of the following quadratic functions, plot the graph and calculate the turning point. Use the vertex form $y = a(x-h)^2 + k$. Also, expand the quadratic into standard form $y = ax^2 + bx + c$ and simplify.
+
+\begin{multicols}{2}
+\begin{parts}
+   \scalebox{0.8}
+    \part $y = (x - 2)^2 + 3$
+    \plotquadratic{1}{2}{3}{}
+    % Standard form: y = x^2 - 4x + 7
+    Standard form: $y = x^2 - 4x + 7$ \ms
+    
+ \scalebox{0.8}
+    \part $y = -2(x + 1)^2 + 4$
+    \plotquadratic{-2}{-1}{4}{}
+    % Standard form: y = -2x^2 - 4x + 2
+    Standard form: $y = -2x^2 - 4x + 2$ \ms
+    
+    % Third quadratic
+    \part $y = 3(x - 1)^2 - 2$
+    \plotquadratic{3}{1}{-2}{}
+    % Standard form: y = 3x^2 - 6x + 1
+    Standard form: $y = 3x^2 - 6x + 1$ \ms
+    
+    % Fourth quadratic
+    \part $y = -x^2 + 5$
+    \plotquadratic{-1}{0}{5}{}
+    % Standard form: y = -x^2 + 5 (Already in standard form)
+    Standard form: $y = -x^2 + 5$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+\question Find the turning point of each quadratic function and sketch including vertex point.
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $y = x^2 - 4x + 7$ \ms
+    \part $y = -2x^2 - 4x + 2$ \ms
+    \part $y = 3x^2 - 6x + 1$ \ms
+    \part $y = x^2 +8x+ 5$ \ms
+    \part $y = 4x^2 + 12x - 6$ \ms
+    \part $y = -3x^2 + 24x + 2$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+\question Find the turning points (tps) of each cubic function and sketch the graph, including the turning points.
+
+
+\begin{parts}\Large
+    \part $y = x^3 - 3x^2$ \\ (tps: $(0, 0)$, $(2, 4)$) \bs
+    \part $y = x^3 - 6x^2 + 9x - 10$ \\ (tps: $(1, -6)$, $(3, -10)$) \bs
+    \part $y = x^3 - 3x^2 - 9x + 6$ \\ (tps: $(-1, 11)$, $(3, -24)$) \bs
+    \part $y = 2x^3 - 3x^2 - 12x + 7$ \\ (tps: $(-1, 20)$, $(2, -25)$) \bs
+    \part $y = 2x^3 - 9x^2 + 12x$ \\ (tps: $(0, 0)$, $(3, 0)$) \bs
+    \part $y = x^3 - 6x^2 + 9x$ \\ (tps: $(0, 0)$, $(3, 0)$) \bs
+\end{parts}
+
+
+\question HW 10.4 page 253 -256
+\end{questions}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+
+\end{document}

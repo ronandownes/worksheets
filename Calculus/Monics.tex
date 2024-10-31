@@ -1,0 +1,204 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{Solve quadratics by factors and find turning points of cubics}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ts}{\vspace{22 mm}}
+\newcommand{\ms}{\vspace{33 mm}}
+\newcommand{\bs}{\vspace{44mm}}
+\newcommand{\ls}{\vspace{44 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+
+
+% Define the monic quadratic function with correct sign handling
+\newcommand{\monicquad}[2]{%
+    x^2%
+    \ifnum\numexpr#1+#2>0 + \the\numexpr#1+#2\relax \else \ifnum\numexpr#1+#2<0 \the\numexpr#1+#2\relax \fi\fi%
+    \ifnum\numexpr#1+#2=0 \else x\fi%
+    \ifnum\numexpr#1*#2>0 + \the\numexpr#1*#2\relax \else \ifnum\numexpr#1*#2<0 \the\numexpr#1*#2\relax \fi\fi%
+}
+
+
+
+
+
+
+\newcommand{\cubicwithtps}[3]{
+    \pgfmathtruncatemacro{\a}{3*#1}  % x^2 term (after integration and multiplying by 6)
+    \pgfmathtruncatemacro{\b}{6*#2}  % x term (after integration and multiplying by 6)
+
+    $y = 2x^3 
+    \ifnum\a>0 + \a x^2 \else \a x^2 \fi 
+    \ifnum\b>0 + \b x \else \b x \fi 
+    \ifnum#3>0 + #3 \else #3 \fi$
+}
+
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+\vspace{-18mm}
+
+\begin{questions}
+
+\question Recall and understand when to  apply:
+\begin{multicols}{3}
+\begin{parts}
+\part $x^2 + x +c$
+\part  positive  positive factors
+\part negative negative roots
+\part $(x + \hspace{11} )(x+\hspace{11} )$
+\part  Positive + Positive factors
+\part $(x - \hspace{11} )(x-\hspace{11} )$
+\part $  (x + \text{big} )   (x - \text{small} )   $
+\part $  (x - \text{big} )   (x + \text{small} )   $
+\part Sign patterns for 
+\part 
+\part $$
+\part Turning points 
+\part Second derivative  
+\end{parts}
+\end{multicols}
+
+\documentclass[12pt, a4paper]{exam}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\begin{document}
+
+\question Recall and understand when to apply the following factoring and sign patterns:
+
+\begin{multicols}{4}
+\begin{parts}
+    % Positive + Positive factors
+    \part $(x + \hspace{11} )(x + \hspace{11} )$
+    % Negative + Negative factors
+    \part $(x - \hspace{11} )(x - \hspace{11} )$
+    % Mixed signs: large positive, small negative
+    \part $(x + \text{big})(x - \text{small})$
+    % Mixed signs: large negative, small positive
+    \part $(x - \text{big})(x + \text{small})$
+    % Sign patterns for general quadratic
+    \part Sign patterns for $Ax^2 + Bx + C$
+    \begin{itemize}
+        \item If $A > 0$, $B > 0$, and $C > 0$: $(x + \hspace{11})(x + \hspace{11})$
+        \item If $A > 0$, $B < 0$, and $C > 0$: $(x - \hspace{11})(x - \hspace{11})$
+        \item If $C < 0$: Mixed signs $(x + \hspace{11})(x - \hspace{11})$
+    \end{itemize}
+    % Simple space for custom content if necessary
+    \part 
+    % Space for turning points
+    \part Turning points and their signs
+    \begin{itemize}
+        \item $x = -\frac{B}{2A}$
+        \item Nature of turning point depends on sign of $A$
+    \end{itemize}
+    % Second derivative discussion
+    \part Second derivative and concavity
+    \begin{itemize}
+        \item $f''(x) = 2A$
+        \item If $A > 0$: Concave up (minimum)
+        \item If $A < 0$: Concave down (maximum)
+    \end{itemize}
+\end{parts}
+\end{multicols}
+
+\end{document}
+
+
+\question Solve and sketch these positive intercept positive linear term quadratics by factoring
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $ x^2 +9x  + 8$ \ms
+    \part $ x^2 +2x + 1$ \ms
+    \part $x^2 + 6x + 5 $ \ms
+
+\end{parts}
+\end{multicols}
+\ts
+
+\question Solve and sketch these positive intercept negative linear terms quadratics by factoring
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $ x^2 -4x+3$ \ms
+    \part $ x^2 -11x+10$ \ms
+     \part $x^2 -10x+91$ \ms
+
+\end{parts}
+\end{multicols}
+\ts
+
+
+\question Solve and sketch these negative intercept quadratics
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 -4x-5$ \ms
+   \part $x^2 +8x-9$ \ms
+    \part $x^2 -3x-4$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+\question Solve and sketch
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 +7x+10$ \ms
+   \part $x^2 +15x+26$ \ms
+    \part $x^2 -13x+30$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+
+
+
+\question Solve and sketch 
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 +5x-14$ \ms
+   \part $x^2 +9x-33$ \ms
+    \part $yx^2 -2x-35$ \ms
+
+\end{parts}
+\end{multicols}
+\ts
+
+
+
+
+\question Find the turning points and indicate on a sketch the max and min points
+
+\begin{multicols}{2}
+\begin{parts}\Large
+\part \cubicwithtps{6}{5}{-11}  \ts
+\part \cubicwithtps{7}{10}{-19}  \ts
+\part \cubicwithtps{3}{-4}{2}   \ts 
+\part \cubicwithtps{-5}{-14}{-11}  \ts
+\part \cubicwithtps{4}{-21}{8}   \ts 
+\part \cubicwithtps{7}{10}{-19}  \ts
+\end{parts}
+\end{multicols}
+\bs
+
+
+\end{questions}
+
+\end{document}

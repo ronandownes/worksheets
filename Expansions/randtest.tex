@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+\newcommand{\vs}{\vspace{26mm}}
+\newcommand{\ps}{\vspace{26mm}}
+\newcommand{\qs}{\vspace{26mm}}
+% Define random prime number from {2, 3, 5, 7, 11}
+\newcommand{\randprime}{%
+    \pgfmathparse{int(random(1,5))}%
+    \let\temp=\pgfmathresult%
+    \ifnum\temp=1 2\else%
+    \ifnum\temp=2 3\else%
+    \ifnum\temp=3 5\else%
+    \ifnum\temp=4 7\else%
+    \ifnum\temp=5 11\fi\fi\fi\fi\fi%
+}
+
+% Define positive coefficient using prime numbers
+\newcommand{\posco}{%
+    \randprime
+}
+
+% Define positive binomial (ax + b) wrapped in math mode, using prime coefficients
+\newcommand{\posbin}{%
+    \pgfmathparse{int(random(1,5))}%
+    \let\a=\pgfmathresult%
+    \ifnum\a=1 2\else%
+    \ifnum\a=2 3\else%
+    \ifnum\a=3 5\else%
+    \ifnum\a=4 7\else%
+    \ifnum\a=5 11\fi\fi\fi\fi\fi%
+    %
+    \pgfmathparse{int(random(1,5))}%
+    \let\b=\pgfmathresult%
+    \ifnum\b=1 2\else%
+    \ifnum\b=2 3\else%
+    \ifnum\b=3 5\else%
+    \ifnum\b=4 7\else%
+    \ifnum\b=5 11\fi\fi\fi\fi\fi%
+    (\a x + \b)
+}
+
+\begin{document}
+
+\begin{questions}
+\Large
+% Question 1: Expanding binomials
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+    \part \(\randprime \posbin\)\ps
+    \part \(\posco \posbin\)\ps
+    \part \(\posco \posbin\)\ps
+    \end{parts}
+\end{multicols}
+\qs
+
+\end{questions}
+
+\end{document}

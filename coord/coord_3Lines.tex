@@ -1,0 +1,226 @@
+% Elimination worksheet
+
+
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage[margin=12mm]{geometry}
+\usepackage{pgfmath}
+\usepackage{amsmath} % For mathematical symbols and equation alignment
+
+\usepackage{tikz} % For creating coordinate grids and sketches
+\usepackage{multicol} % For multi-column layout
+\usepackage{mdframed} % For boxed environments
+\usepackage{xcolor} % For color customization
+
+\usepackage{xcolor}
+\usepackage{multicol} % For multi-column layout
+\usepackage{mdframed} % For framed boxes
+% Define a custom spacing command
+\newcommand{\verticalspace}{\vspace{44mm}} % Default to 1mm spacing
+\input{commands.tex} % Import the command definitions from external file
+
+\begin{document}
+
+\section*{Three Forms of equation of a line}
+\LARGE
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+Three Forms of the Equation of a Line :
+\begin{itemize}
+    \item \( y = mx + c \) \quad (Slope-intercept form)
+    \item \( y - y_1 = m(x - x_1) \) \quad (Point-slope form)
+    \item \( ax + by  = c \) \quad (General form)
+\end{itemize}
+
+\end{mdframed}
+
+
+
+\noindent 
+% Questions snippet for solving linear equations
+\begin{questions}
+\LARGE
+
+\question What is the slope and y-intercept of the following lines given in slope intercept format?
+
+\begin{multicols}{2}
+\begin{parts}
+
+\part \( y = 3x + 2 \) \verticalspace
+\part \( y = -5x - 1 \) \verticalspace
+\part \( y = \frac{1}{3}x - 4 \) \verticalspace
+\part \( y = \frac{1}{2}x + 5 \) \verticalspace
+\part \( y = -\frac{7}{5}x + \frac{3}{2} \) \verticalspace
+\part \( y = \frac{3}{2}x - 3 \) \verticalspace
+
+\end{parts}
+\end{multicols}
+
+\newpage
+\question What is the slope and a point on these lines?
+
+\begin{multicols}{2}
+\begin{parts}
+
+\part \( y - 5 = \frac{6}{7}(x - 4) \) \verticalspace
+\part \( y + 4 = \frac{7}{2}(x - 3) \) \verticalspace
+\part \( y - 6 = -\frac{3}{5}(x - 4) \) \verticalspace
+\part \( y - 2 = -\frac{1}{7}(x - 3) \) \verticalspace
+\part \( y + 1 = 4(x - 2) \) \verticalspace
+\part \( y + 3 = \frac{1}{3}(x - 7) \) 
+
+\end{parts}
+\end{multicols}
+
+\question Write the equation of the line in point-slope form given the following slopes and points:
+
+\begin{multicols}{3}
+\begin{parts}
+
+\part \( \frac{7}{3} \), \( (4, 5) \) \verticalspace
+\part \( \frac{7}{2} \), \( (3, -4) \) \verticalspace
+\part \( -\frac{3}{5} \), \( (2, 1) \) \verticalspace
+\part \( -\frac{3}{7} \), \( (4, -1) \) \verticalspace
+\part \( 4 \), \( (2, -1) \) \verticalspace
+\part \( \frac{1}{3} \), \( (7, -3) \) \verticalspace
+
+\end{parts}
+\end{multicols}
+
+
+\newpage
+\question Find the x- and y-intercepts and graph the line:
+
+\begin{multicols}{2} % Start two-column layout
+\begin{parts}
+
+\part \( 3x + 2y = 12 \) 
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    % Adjusted for positive intercepts (x=4, y=6)
+    \draw[thin, gray!40] (-2,-2) grid (8,8);
+    \draw[thick, ->] (-2,0) -- (8,0) node[right] {$x$};
+    \draw[thick, ->] (0,-2) -- (0,8) node[above] {$y$};
+    % Plot intercepts and line
+    \fill[red] (4,0) circle (3pt) node[below] {$(4, 0)$};
+    \fill[red] (0,6) circle (3pt) node[left] {$(0, 6)$};
+    \draw[thick, red] (4,0) -- (0,6); % Draw the line
+\end{tikzpicture}
+\end{center}
+
+\part \( 2x - 3y = 6 \) \verticalspace
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    % Adjusted for both positive and negative intercepts (x=3, y=-2)
+    \draw[thin, gray!40] (-5,-5) grid (5,5);
+    \draw[thick, ->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[thick, ->] (0,-5) -- (0,5) node[above] {$y$};
+\end{tikzpicture}
+\end{center}
+
+\part \( -4x + 3y = 12 \) \verticalspace
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    % Adjusted for negative x-intercept and positive y-intercept (x=-3, y=4)
+    \draw[thin, gray!40] (-6,-2) grid (4,6);
+    \draw[thick, ->] (-6,0) -- (4,0) node[right] {$x$};
+    \draw[thick, ->] (0,-2) -- (0,6) node[above] {$y$};
+\end{tikzpicture}
+\end{center}
+
+
+
+\part \( 5x + 2y = 10 \) \verticalspace
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+    % Adjusted for smaller intercepts (x=2, y=5)
+    \draw[thin, gray!40] (-3,-3) grid (5,7);
+    \draw[thick, ->] (-3,0) -- (5,0) node[right] {$x$};
+    \draw[thick, ->] (0,-3) -- (0,7) node[above] {$y$};
+\end{tikzpicture}
+\end{center}
+
+
+
+
+\end{parts}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+\question Find the equations of the following graphs:
+
+\begin{multicols}{2} % Start two-column layout
+\begin{parts}
+
+\part 
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+    % Grid adjusted for intercepts at (3, 0) and (0, 4)
+    \draw[thin, gray!40] (-4,-2) grid (4,6);
+    \draw[thick, ->] (-4,0) -- (4,0) node[right] {$x$};
+    \draw[thick, ->] (0,-2) -- (0,6) node[above] {$y$};
+    % Plot intercepts and line
+    \fill[red] (3,0) circle (3pt) node[below] {$(3, 0)$};
+    \fill[red] (0,4) circle (3pt) node[left] {$(0, 4)$};
+    \draw[thick, red] (3,0) -- (0,4); % Draw the line
+\end{tikzpicture}
+\end{center}
+
+\part
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+    % Grid adjusted for intercepts at (-2, 0) and (0, -6)
+    \draw[thin, gray!40] (-4,-8) grid (4,2);
+    \draw[thick, ->] (-4,0) -- (4,0) node[right] {$x$};
+    \draw[thick, ->] (0,-8) -- (0,2) node[above] {$y$};
+    % Plot intercepts and line
+    \fill[red] (-2,0) circle (3pt) node[below] {$(-2, 0)$};
+    \fill[red] (0,-6) circle (3pt) node[left] {$(0, -6)$};
+    \draw[thick, red] (-2,0) -- (0,-6); % Draw the line
+\end{tikzpicture}
+\end{center}
+
+\part
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+    % Grid adjusted for intercepts at (-5, 0) and (0, 3)
+    \draw[thin, gray!40] (-6,-2) grid (4,4);
+    \draw[thick, ->] (-6,0) -- (4,0) node[right] {$x$};
+    \draw[thick, ->] (0,-2) -- (0,4) node[above] {$y$};
+    % Plot intercepts and line
+    \fill[red] (-5,0) circle (3pt) node[below] {$(-5, 0)$};
+    \fill[red] (0,3) circle (3pt) node[left] {$(0, 3)$};
+    \draw[thick, red] (-5,0) -- (0,3); % Draw the line
+\end{tikzpicture}
+\end{center}
+
+\part
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+    % Grid adjusted for intercepts at (4, 0) and (0, -4)
+    \draw[thin, gray!40] (-4,-5) grid (6,3);
+    \draw[thick, ->] (-4,0) -- (6,0) node[right] {$x$};
+    \draw[thick, ->] (0,-5) -- (0,3) node[above] {$y$};
+    % Plot intercepts and line
+    \fill[red] (4,0) circle (3pt) node[below] {$(4, 0)$};
+    \fill[red] (0,-4) circle (3pt) node[left] {$(0, -4)$};
+    \draw[thick, red] (4,0) -- (0,-4); % Draw the line
+\end{tikzpicture}
+\end{center}
+
+\end{parts}
+\end{multicols}
+
+
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[ddmmyy, useregional]{datetime}
+\usepackage{amsmath, array, booktabs, multicol, pgfplots, tabularx, pgfmath, xcolor, mdframed}
+
+% Geometry settings for consistent margins
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\pagestyle{empty}
+
+% Document Metadata
+\title{\large Simultaneous Equations using Elimination \\ \dayofweekname{\day}{\month}{\year} \today \\ \vspace{2mm} \quad Student's Name: \underline{\hspace{8cm}}}
+\date{}
+
+\input{SimLineLine/newcommands}
+
+% Begin Document
+\begin{document}
+\maketitle
+
+\LARGE
+\noindent 
+In this unit, we will explore the elimination method for solving simultaneous equations. Check your answers and aim to understand each step fully.
+
+% Instruction Frame
+\begin{mdframed}[backgroundcolor=gray!10]
+    \begin{multicols}{2}
+        \large
+        \begin{itemize}
+            \item Align terms of both equations to eliminate variables.
+            \item Add or subtract to eliminate one variable.
+            \item Substitute to find the remaining variable.
+            \item Verify solutions by substitution.
+            \item Work with a partner for clarity and improvement.
+        \end{itemize}
+    \end{multicols}
+\end{mdframed}
+
+% Table of Contents
+   \LARGE
+% \begin{multicols}{2}
+    \tableofcontents
+% \end{multicols}
+\newpage
+
+% Questions Section
+\begin{questions}
+ 
+    % Adding sections for each question type, with file inputs
+    \addcontentsline{toc}{section}{Opposite individual  \( y \) and \( -y \) terms}
+    \input{SimLineLine/1oppositeys}\newpage
+
+  \addcontentsline{toc}{section}{Opposite   \( ay \) and \( -ay \) terms}
+    \input{SimLineLine/2oppositeyterms}\newpage
+
+    \addcontentsline{toc}{section}{Multiply One Line}
+    \input{SimLineLine/3timesoneline}\newpage
+\end{questions}
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol} % For multi-column layout
+\usepackage{mdframed} % For framed boxes
+\usepackage{tikz} % For drawing and diagrams
+
+% Load the expandcubic command from expandcubic.tex if needed
+% \input{expandcubic}
+
+% Define the new elimination solution command (if relevant for this document)
+% Here you'd add any other custom commands you need.
+
+\begin{document}
+
+\title{Mathematics Exam}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\section*{Instructions}
+Answer all questions. Show all work for full credit.
+
+\begin{questions}
+
+% Question 1: Simple math question
+\question Find the x- and y-intercepts of the following line:
+\[
+3x + 2y = 6
+\]
+
+% Question 2: Example using multicols and parts
+\question Expand the following expression and divide it by the binomial.
+
+\begin{multicols}{2}
+    \begin{parts}
+        \part \( (2x^2 + 3x + 5)(x - 2) \)
+        \part \( (4x^2 - 2x + 7)(x + 3) \)
+    \end{parts}
+\end{multicols}
+
+% Question 3: A diagram using TikZ
+\question Sketch the graph of the following quadratic equation using TikZ.
+\[
+y = x^2 - 4x + 3
+\]
+
+\begin{tikzpicture}[scale=0.7]
+    \draw[thin, gray!40] (-5,-5) grid (5,5);
+    \draw[<->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[<->] (0,-5) -- (0,5) node[above] {$y$};
+    \draw[thick,blue] plot[domain=-1:5] (\x,{(\x)^2 - 4*(\x) + 3});
+\end{tikzpicture}
+
+\end{questions}
+
+\end{document}

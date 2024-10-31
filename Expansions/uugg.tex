@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+\newcommand{\gap}{\vspace{19mm}}
+\newcommand{\Gap}{\vspace{38mm}}
+\newcommand{\GAP}{\vspace{66mm}}
+% Randomize seed using the current time
+\pgfmathsetseed{1}
+\newcommand{\Gap}{\vspace{36mm}}
+% Define commands for different expansions
+
+
+
+% Monicpositivefactor lead, Nonmonicpositivefactor trail
+\newcommand{\uggg}{%
+    \pgfmathtruncatemacro{\a}{random(2,9)} 
+    \pgfmathtruncatemacro{\b}{random(2,9)} 
+      \pgfmathtruncatemacro{\c}{random(2,9)} 
+    \edef\result{(x + \c)(\b x +\a)}%
+    \result
+}
+
+
+
+
+
+\begin{document}
+
+\section*{uggg  FOIL expansions  \quad Student's Name: \underline{\hspace{5cm}}} 
+
+
+\begin{questions}
+\LARGE
+
+% Question 1: Monic Positive Lead, Non-Monic Positive Trail
+\question
+\gap
+  
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+
+\begin{parts}
+    \part \( \uggg \)
+      \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+           \part \( \uggg \)
+    \Gap
+           \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+       \part \( \uggg \)
+    \Gap
+\end{parts}
+\end{multicols}
+
+
+\end{questions}
+
+\end{document}

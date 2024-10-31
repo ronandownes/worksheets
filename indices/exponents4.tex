@@ -1,0 +1,243 @@
+% worksheet name
+\documentclass[12pt, a4paper, addpoints]{exam}
+\title{Square Roots,  General Roots  and Fractional  Powers}
+\usepackage{adjustbox}
+\usepackage{amssymb}
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=7mm, right=7mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+% \author{Mr Downes}
+\newcommand{\ts}{\vspace{11mm}}
+\newcommand{\ms}{\vspace{22mm}}
+\newcommand{\bs}{\vspace{33mm}}
+\newcommand{\ls}{\vspace{44mm}}
+\newcommand{\hs}{\vspace{55mm}}
+\usepackage{array}     
+\usepackage{graphicx}  
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+
+% \section{Calculations using powers  $a^p$  and $a^q$ }
+ % \huge
+
+\large
+
+\begin{questions}
+\vspace{-12mm}
+\question Learning intentions: be able to Look  up, recall, understand, and apply these identities from page 21 of the formulae and tables booklet:
+\large
+\begin{parts}
+
+\part \text{Roots - Notation, Meaning, and Unit Fraction Notation:} \hfill $a^{\frac{1}{q}} = \sqrt[q]{a}$
+
+\part \text{General Fractional Exponent as a Root Taken to a Power:} \hfill $a^{\frac{p}{q}} = \sqrt[q]{a^p} = \left( \sqrt[q]{a} \right)^p$
+
+\part \text{Finding Unknown Exponents Using Logarithms:} \hfill $a^x = y \iff \log_a y = x$
+
+\end{parts}
+
+
+
+
+
+
+\question  Copy out and sound out both   tables  for homework.  Memorise the square roots and cube roots. Understand the correspondance between the tables.  For example, the fifth root of 7776 is 6, $\sqrt[5]{7776} = 6$ corresponds to  $6^5 = 7776$. Take turns asking your partner for a square root, a cube root, a fourth root, a fifth root, and a sixth root that they can look up in the table. Extend with \(\blacksquare^{\Box}\) telling your partner to use $\sqrt[\blacksquare]{\Box}$ filling in the the order of the root first and the large number itself.
+
+
+
+
+
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$2^2 = 4$   & $3^2 = 9$   & $4^2 = 16$  & $5^2 = 25$  & $6^2 = 36$  & $7^2 = 49$  & $8^2 = 64$  & $9^2 = 81$  & $10^2 = 100$ & $11^2 = 121$ \\ \hline
+$2^3 = 8$   & $3^3 = 27$  & $4^3 = 64$  & $5^3 = 125$ & $6^3 = 216$ & $7^3 = 343$ & $8^3 = 512$ & $9^3 = 729$ & $10^3 = 1000$ & $11^3 = 1331$ \\ \hline
+$2^4 = 16$  & $3^4 = 81$  & $4^4 = 256$ & $5^4 = 625$ & $6^4 = 1296$ & $7^4 = 2401$ & $8^4 = 4096$ & $9^4 = 6561$ &  &  \\ \hline
+$2^5 = 32$  & $3^5 = 243$ & $4^5 = 1024$ & $5^5 = 3125$ & $6^5 = 7776$ &  &  & &  & \\ \hline
+$2^6 = 64$  & $3^6 = 729$ & $4^6 = 4096$ & &&&&&&\\ \hline
+\end{tabular}
+\caption{Powers of bases 2 to 11 up to a four-figure cutoff.}
+\end{table}
+
+
+
+
+
+
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+
+$\sqrt{4} = 2$   & $\sqrt{9} = 3$   & $\sqrt{16} = 4$  & $\sqrt{25} = 5$  & $\sqrt{36} = 6$  & $\sqrt{49} = 7$  & $\sqrt{64} = 8$  & $\sqrt{81} = 9$  & $\sqrt{100} = 10$ \\ \hline
+$\sqrt[3]{8} = 2$   & $\sqrt[3]{27} = 3$  & $\sqrt[3]{64} = 4$  & $\sqrt[3]{125} = 5$ & $\sqrt[3]{216} = 6$ & $\sqrt[3]{343} = 7$ & $\sqrt[3]{512} = 8$ & $\sqrt[3]{729} = 9$ & $\sqrt[3]{1000} = 10$  \\ \hline
+$\sqrt[4]{16} = 2$  & $\sqrt[4]{81} = 3$  & $\sqrt[4]{256} = 4$ & $\sqrt[4]{625} = 5$ & $\sqrt[4]{1296} = 6$ & $\sqrt[4]{2401} = 7$ & $\sqrt[4]{4096} = 8$ & $\sqrt[4]{6561} = 9$ &    \\ \hline
+$\sqrt[5]{32} = 2$  & $\sqrt[5]{243} = 3$ & $\sqrt[5]{1024} = 4$ & $\sqrt[5]{3125} = 5$ & $\sqrt[5]{7776} = 6$ &  &  & &   \\ \hline
+$\sqrt[6]{64} = 2$  & $\sqrt[6]{729} = 3$ & $\sqrt[6]{4096} = 4$ &&&&&&\\ \hline
+\end{tabular}
+\caption{Roots taken up to the  sixth power of perfect powers numbers}
+\end{table}
+\ts
+\ts
+\question The \textbf{square root} of a number is the number that, when multiplied by itself, gives the original number. Writen:    $a^{\frac{1}{2}} = \sqrt{a}$ where \(a\) is the number.
+
+\textbf{Example:} The square root of 16 is 4, because \(4 \times 4 = 16\). So, \(\sqrt{16} = 4\). 
+
+Use the $\sqrt{\blacksquare}$ function to find the following square roots. Challenge your buddy to calculate larger square roots using \(\blacksquare^2\). For example, \(31^2 = 961\) leads to the question: What is the square root of 961?
+
+\setlength{\columnsep}{15pt}
+\begin{multicols}{6}
+\begin{parts}
+\part $\sqrt{4}$
+\part $\sqrt{25}$
+\part $\sqrt{81}$
+\part $\sqrt{361}$
+\part $\sqrt{484}$
+\part $\sqrt{9801}$
+\end{parts}
+\end{multicols}
+\ts
+
+
+
+\question Write down the value of the following cube roots. On a Casio CW Calculator, use the $\sqrt[\blacksquare]{\Box}$  by pressing \textbf{Shift},   $\sqrt{\Box}$,3 and filling in the  hollow box with the argument such as 1000.
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{5}
+\begin{parts}
+\part $\sqrt[3]{1331}$
+\part $\sqrt[3]{343}$
+\part $\sqrt[3]{64}$
+\part $\sqrt[3]{216}$
+\part $\sqrt[3]{1000}$
+\part $\sqrt[3]{512}$
+\part $\sqrt[3]{8}$
+\part $\sqrt[3]{729}$
+\part $\sqrt[3]{125}$
+\part $\sqrt[3]{2197}$
+\part $\sqrt[3]{27}$
+\part $\sqrt[3]{1728}$
+\end{parts}
+\end{multicols}
+\ts
+
+
+\question Find the value of each of these:
+
+\begin{multicols}{6}
+\begin{parts}
+\part $\left( \frac{1}{4} \right)^{\frac{1}{2}}$
+\part $\left( \frac{1}{27} \right)^{\frac{1}{3}}$
+\part $16^{-\frac{1}{2}}$
+\part $\left( \frac{1}{9} \right)^{-\frac{1}{2}}$
+\part $100^{-\frac{1}{2}}$
+\part $\left( 0.01 \right)^{\frac{1}{2}}$
+\end{parts}
+\end{multicols}
+\ts
+\question Rewrite the following using the $\sqrt{\ }$ sign:
+
+\begin{multicols}{6}
+\begin{parts}
+\part $a^{\frac{1}{2}}$
+\part $a^{\frac{1}{4}}$
+\part $a^{\frac{2}{3}}$
+\part $a^{\frac{5}{2}}$
+\part $a^{\frac{3}{4}}$
+\part $\left( \frac{a}{x} \right)^{\frac{1}{2}}$
+\end{parts}
+\end{multicols}
+
+\question Find the value of each of the following:
+
+\begin{multicols}{5}
+\begin{parts}
+\part $81^{\frac{1}{2}}$
+\part $8^{\frac{2}{3}}$
+\part $16^{\frac{3}{4}}$
+\part $4^{\frac{3}{2}}$
+\part $27^{\frac{2}{3}}$
+\part $64^{\frac{2}{3}}$
+\part $100^{\frac{3}{2}}$
+\part $81^{\frac{3}{4}}$
+\part $125^{\frac{2}{3}}$
+\end{parts}
+\end{multicols}
+
+
+\question Find the value of each of these:
+\begin{multicols}{6}
+\begin{parts}
+\part $\left( \frac{1}{4} \right)^{\frac{1}{2}}$
+\part $\left( \frac{1}{27} \right)^{\frac{1}{3}}$
+\part $16^{-\frac{1}{2}}$
+\part $\left( \frac{1}{9} \right)^{-\frac{1}{2}}$
+\part $100^{-\frac{1}{2}}$
+\part $\left( 0.01 \right)^{\frac{1}{2}}$
+\end{parts}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+\question  Homework: Finish these and Q7 to Q18 page 330
+
+
+
+\end{questions}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+% \part \text{Product of Powers — Add the exponents} \hfill $a^p a^q = a^{p+q}$
+
+% \part \text{Quotient of Powers — Subtract  the exponents} \hfill $\dfrac{a^p}{a^q} = a^{p-q}$
+% \part \text{Power of a Power — Multiply the exponents} \hfill $(a^p)^q = a^{pq}$
+
+% \part \text{Zero Exponent — Any non-zero base raised to zero equals 1:} \hfill $a^0 = 1$
+
+% \part \text{Negative Exponent — Recipricate  and change the sign} \hfill $a^{-p} = \dfrac{1}{a^p}$
+
+
+% \part \text{Power of a Quotient-distribute the index} \hfill $\left( \dfrac{a}{b} \right)^p = \frac{a^p}{b^p}$
+
+% \part \text{Power of a Product — Distribute the index} \hfill $(ab)^p = a^p b^p$
+

@@ -1,0 +1,49 @@
+\documentclass[12pt, a4paper]{exam}
+\usepackage{multicol}
+\usepackage{pgfmath} % For random number generation
+
+% Define the monic quadratic function with correct sign handling
+\newcommand{\monicquad}[2]{%
+    x^2%
+    \ifnum\numexpr#1+#2>0 + \the\numexpr#1+#2\relax \else \ifnum\numexpr#1+#2<0 \the\numexpr#1+#2\relax \fi\fi%
+    \ifnum\numexpr#1+#2=0 \else x\fi%
+    \ifnum\numexpr#1*#2>0 + \the\numexpr#1*#2\relax \else \ifnum\numexpr#1*#2<0 \the\numexpr#1*#2\relax \fi\fi%
+}
+
+% Random number between -11 and 11 excluding -1, 0, 1
+\newcommand{\randnumA}{
+    \pgfmathsetmacro{\tempA}{random(2,11)}%
+    \ifnum\tempA=2 \tempA\else \pgfmathsetmacro{\tempA}{random(-11,-2)}\fi%
+    \tempA
+}
+
+\newcommand{\randnumB}{
+    \pgfmathsetmacro{\tempB}{random(2,11)}%
+    \ifnum\tempB=2 \tempB\else \pgfmathsetmacro{\tempB}{random(-11,-2)}\fi%
+    \tempB
+}
+
+\begin{document}
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    % Generate two random values and store them in tempA and tempB
+    \pgfmathsetmacro{\tempA}{\randnumA}%
+    \pgfmathsetmacro{\tempB}{\randnumB}%
+    \part $\monicquad{\tempA}{\tempB}$ \ms
+
+    % Repeat for the next part
+    \pgfmathsetmacro{\tempA}{\randnumA}%
+    \pgfmathsetmacro{\tempB}{\randnumB}%
+    \part $\monicquad{\tempA}{\tempB}$ \ms
+
+    % Repeat for the next part
+    \pgfmathsetmacro{\tempA}{\randnumA}%
+    \pgfmathsetmacro{\tempB}{\randnumB}%
+    \part $\monicquad{\tempA}{\tempB}$ \ms
+\end{parts}
+\end{multicols}
+
+\ts
+
+\end{document}

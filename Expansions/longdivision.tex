@@ -1,0 +1,94 @@
+\newcommand{\expandcubic}[5]{%
+    % First, expand the trinomial and binomial to form the cubic
+    
+    % Terms for ax^2 * (ex + f)
+    \pgfmathparse{int(#1*#4)} \let\A\pgfmathresult  % A = a*e
+    \pgfmathparse{int(#1*#5)} \let\B\pgfmathresult  % B = a*f
+    \pgfmathparse{int(#2*#4)} \let\C\pgfmathresult  % C = b*e
+    \pgfmathparse{int(#2*#5)} \let\D\pgfmathresult  % D = b*f
+    \pgfmathparse{int(#3*#4)} \let\E\pgfmathresult  % E = c*e
+    \pgfmathparse{int(#3*#5)} \let\F\pgfmathresult  % F = c*f
+
+    % Compute absolute values and cast to integer
+    \pgfmathparse{int(abs(\A))} \let\absA\pgfmathresult
+    \pgfmathparse{int(abs(\B))} \let\absB\pgfmathresult
+    \pgfmathparse{int(abs(\C))} \let\absC\pgfmathresult
+    \pgfmathparse{int(abs(\D))} \let\absD\pgfmathresult
+    \pgfmathparse{int(abs(\E))} \let\absE\pgfmathresult
+    \pgfmathparse{int(abs(\F))} \let\absF\pgfmathresult
+
+    % Handle the signs for each term
+    \ifnum\A>0 \def\signA{} \else \def\signA{-} \fi
+    \ifnum\B>0 \def\signB{+} \else \def\signB{-} \fi
+    \ifnum\C>0 \def\signC{+} \else \def\signC{-} \fi
+    \ifnum\D>0 \def\signD{+} \else \def\signD{-} \fi
+    \ifnum\E>0 \def\signE{+} \else \def\signE{-} \fi
+    \ifnum\F>0 \def\signF{+} \else \def\signF{-} \fi
+
+    % Print the cubic expression
+    $ \signA
+    \ifnum\A=1
+        x^3
+    \else
+        \pgfmathprintnumber{\absA}x^3
+    \fi
+    \ifnum\B=0
+    \else
+        \signB
+        \ifnum\absB=1
+            x^2
+        \else
+            \pgfmathprintnumber{\absB}x^2
+        \fi
+    \fi
+    \ifnum\C=0
+    \else
+        \signC
+        \ifnum\absC=1
+            x
+        \else
+            \pgfmathprintnumber{\absC}x
+        \fi
+    \fi
+    \ifnum\D=0
+    \else
+        \signD
+        \pgfmathprintnumber{\absD}
+    \fi
+    $
+    % Now set it up for division over the second binomial
+    %
+    \par\vspace{2mm} % Some space
+    $ \frac{%
+    \signA
+    \ifnum\A=1
+        x^3
+    \else
+        \pgfmathprintnumber{\absA}x^3
+    \fi
+    \ifnum\B=0
+    \else
+        \signB
+        \ifnum\absB=1
+            x^2
+        \else
+            \pgfmathprintnumber{\absB}x^2
+        \fi
+    \fi
+    \ifnum\C=0
+    \else
+        \signC
+        \ifnum\absC=1
+            x
+        \else
+            \pgfmathprintnumber{\absC}x
+        \fi
+    \fi
+    \ifnum\D=0
+    \else
+        \signD
+        \pgfmathprintnumber{\absD}
+    \fi
+    }{#4x \ifnum#5>0 + \else - \fi \pgfmathprintnumber{abs(#5)}}
+    $
+}

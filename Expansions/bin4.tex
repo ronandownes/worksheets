@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+
+% Randomize seed using the current time
+\pgfmathsetseed{\number\time}
+
+% Define a command for generating random coefficients
+\newcommand{\randcoef}{%
+    \pgfmathtruncatemacro{\temp}{random(1,5)}\temp
+}
+
+% Define a command for generating perfect squares
+\newcommand{\perfectsquare}{%
+    \pgfmathsetmacro{\a}{\randcoef} % Random coefficient for x
+    \pgfmathsetmacro{\b}{\randcoef} % Random coefficient for constant
+    % Generates (a x + b)(a x + b)
+    \((\a x + \b)(\a x + \b)\)
+}
+
+% Define a command for generating the difference of squares
+\newcommand{\differenceofsquares}{%
+    \pgfmathsetmacro{\a}{\randcoef} % Random coefficient for x
+    \pgfmathsetmacro{\b}{\randcoef} % Random coefficient for constant
+    % Generates (a x + b)(a x - b)
+    \((\a x + \b)(\a x - \b)\)
+}
+
+% Define a command for generating trivial form (x + b)(x + b)
+\newcommand{\trivialform}{%
+    \pgfmathsetmacro{\b}{\randcoef} % Random coefficient
+    % Generates (x + b)(x + b)
+    \((x + \b)(x + \b)\)
+}
+
+% Define a command for generating general form
+\newcommand{\generalform}{%
+    \pgfmathsetmacro{\a}{\randcoef} % Random coefficient for general form
+    \pgfmathsetmacro{\b}{\randcoef} % Random coefficient for general form
+    % Generates (a x + b)(a x + b)
+    \((\a x + \b)(\a x + \b)\)
+}
+
+\begin{document}
+
+\section*{Expand two binomials in \( x \) \quad  Student's Name: \underline{\hspace{5cm}}}
+
+\begin{questions}
+\LARGE
+
+% Question 1: Perfect Squares
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \( \perfectsquare \)   \ps
+    \part  \( \perfectsquare \)   \ps
+\end{parts}
+\end{multicols}
+
+% Question 2: Difference of Two Squares
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \( \differenceofsquares \)   \ps
+    \part  \( \differenceofsquares \)   \ps
+\end{parts}
+\end{multicols}
+
+% Question 3: Trivial Form
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \( \trivialform \)   \ps
+    \part  \( \trivialform \)   \ps
+\end{parts}
+\end{multicols}
+
+% Question 4: General Form
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \( \generalform \)   \ps
+    \part  \( \generalform \)   \ps
+\end{parts}
+\end{multicols}
+
+\end{questions}
+
+\end{document}

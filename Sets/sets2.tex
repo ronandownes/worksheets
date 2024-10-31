@@ -1,0 +1,371 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\pagestyle{empty} % Suppress page numbers
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[top=5mm, bottom=5mm, left=5mm, right=5mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\usepackage[margin=15mm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+
+% Define the \expandbinomials command
+\input{commands}
+
+\newcommand{\verticalspace}{\vspace{26mm}} 
+\newcommand{\ts}{\vspace{9mm}}
+\newcommand{\ms}{\vspace{15mm}}
+\newcommand{\bs}{\vspace{30mm}}
+
+
+\begin{document}
+
+\section*{Sets terminology page 45} 
+\begin{questions}
+\Large
+
+
+
+\question   
+Use the given Venn diagram to list the elements of each of these sets:
+
+\begin{multicols}{2}
+
+    \begin{parts}
+        \part $A$
+        \part $A \cup B$
+        \part $A'$
+        \part $A \cap B$
+        \part $(A \cup B)'$
+    \end{parts}
+
+    % Right Column: Venn Diagram
+    \begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw (0,0) rectangle (8,6); % Universal set U
+            \node at (1,5.5) {$U$}; % Label for Universal set
+
+            \draw[fill=none] (2.5,2.5) circle(2.2cm); % Circle for set A
+            \draw[fill=none] (4.5,2.5) circle(2.2cm); % Circle for set B
+
+            % Labels for sets
+            \node at (1,4.5) {$A$};
+            \node at (6,4.5) {$B$};
+
+            % Elements with dots and larger text
+            \node at (1.3,2) {$\bullet \ \textbf{Bianca}$};
+            \node at (2,3) {$\bullet \ \textbf{Mariia}$};
+            \node at (3.5,2.9) {$\bullet \ \textbf{Tamara}$};
+            \node at (3.5,1.7) {$\bullet \ \textbf{Leah}$};
+            \node at (5.0,2) {$\bullet \ \textbf{Abi}$};
+            \node at (0.5,1) {$\bullet \ \textbf{Samu}$};
+            \node at (1.0,0.5) {$\bullet \ \textbf{Damian}$};
+            \node at (6,.5) {$\bullet \ \textbf{Keeva}$};
+        \end{tikzpicture}
+    \end{center}
+    \end{minipage}
+    
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\question   
+Use the given Venn diagram to list the elements of each of these sets:
+
+\begin{multicols}{2}
+
+    \begin{parts}
+        \part$A$
+      \part $A \cup B$
+   \part$A'$
+ \part $A \cap B$
+    \part $(A \cup B)'$
+    \end{parts}
+
+
+% Right Column: Venn Diagram
+\begin{center}
+\begin{tikzpicture}
+    \draw (0,0) rectangle (8,6); % Universal set U
+    \node at (1,5.5) {$U$}; % Label for Universal set
+
+    \draw[fill=none] (2.5,2.5) circle(2cm); % Circle for set A
+    \draw[fill=none] (4.5,2.5) circle(2cm); % Circle for set B
+
+    % Labels for sets
+    \node at (.5,4) {$A$};
+    \node at (6.3,4) {$B$};
+
+    % Elements with dots
+    \node at (1.3,2) {$\bullet \ Bianca$};
+    \node at (2,3) {$\bullet \ Mariia$};
+    \node at (3.5,2.9) {$\bullet \ Tamara$};
+    \node at (3.5,1.7) {$\bullet \ Leah$};
+    \node at (5.0,2) {$\bullet \ Abi$};
+    \node at (0.5,1) {$\bullet \ Samu$};
+    \node at (1.0,0.5) {$\bullet \ Damian$};
+    \node at (6,.5) {$\bullet \ Keeva$};
+
+\end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+
+
+
+
+
+\question List the elements in each of the following sets:
+\begin{multicols}{2}
+\begin{parts}
+\part $W$ the days of the week \ts
+    \part $C = \{ \text{factors of 10} \}$ \ts
+    \part $D = \{ \text{The multiples of 3} \}$\ts
+    \part $E = \{ x \mid 4 < x < 10, x \in \mathbb{N} \}$\ts
+\end{parts}
+
+\end{multicols}
+
+
+
+
+\question 
+
+\begin{multicols}{2}
+    \begin{parts}
+        \part What type of  diagram is shown? \ts
+        \part List the elements of $A$ \ts
+        \part What is $|A|$ (the cardinality or size of of set $A$)?\ts
+    \end{parts}
+    
+    % Right Column: Diagram of Set A
+    \columnbreak
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[fill=none] (2,2) circle(2cm); % Circle for set A
+
+        % Label for set A
+        \node at (0,4) {$A$};
+
+        % Elements with dots
+        \node at (1.5,2.7) {$\bullet \ 1$};
+        \node at (2.5,2.5) {$\bullet \ 3$};
+        \node at (2.5,1.5) {$\bullet \ 4$};
+        \node at (1.5,1.5) {$\bullet \ 6$};
+        \node at (2.0,1.0) {$\bullet \ 8$};
+    \end{tikzpicture}
+    \end{center}
+\end{multicols}
+
+
+
+\question 
+On the right, set $X$ is represented by a Venn diagram. Say if each of the following is true or false:
+
+\begin{minipage}{0.5\textwidth}
+    \begin{parts}
+        \part $d \in X$ \ts
+        \part $g \in X$ \ts
+        \part $e \in X$ \ts
+        \part $f \in X$ \ts
+    \end{parts}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        % Circle for set X
+        \draw[fill=none] (2,2) circle(1.6cm); 
+        
+        % Label for set X
+        \node at (1.2,3.9) {$X$};
+        
+        % Elements inside set X
+        \node at (1.5,2.7) {$\bullet \ a$};
+        \node at (2.5,2.5) {$\bullet \ b$};
+        \node at (2.5,1.5) {$\bullet \ c$};
+        \node at (1.5,1.5) {$\bullet \ d$};
+        
+        % Elements outside set X
+        \node at (4.5,2.7) {$\bullet \ f$};
+        \node at (4.5,1.8) {$\bullet \ g$};
+        \node at (1.3,1) {$\bullet \ e$};
+        \node at (4.0,0.8) {$\bullet \ h$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+
+
+
+
+
+\newpage
+
+\question What do the symbols $\in$ and $\notin$ stand for?
+
+\[
+A = \{1, 2, 3, 4\} \quad B = \{a, b, c, d\} \quad C = \{x, y, z\}
+\]
+
+Copy and insert the correct symbol $\in$ or $\notin$ in each of the following:
+\begin{multicols}{5}
+\begin{parts} 
+  \part $3 \, \ldots A$
+   \part $2 \, \ldots B$
+    \part $c \, \ldots B$
+     \part$d \, \ldots C$
+     \part $z \, \ldots C$
+\end{parts}
+\end{multicols}
+
+
+\question Which two of the following sets are equal?
+
+\[
+A = \{2, 3, 4, 6\} \quad B = \{6, 4, 3, 1\} \quad C = \{6, 3, 4, 2\}
+\]
+
+Explain why they are equal.
+
+
+
+
+\question From the given Venn diagram, list the elements of each of these sets:
+
+\begin{minipage}{0.5\textwidth}
+    \begin{parts}
+        
+
+        \part $A$
+        \part $B$
+        \part $A \cap B$
+        \part $A \cup B$
+    \end{parts}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        % Circle for set A
+        \draw[fill=none] (0,0) circle(2.2cm) node[left=3cm] {$A$};
+        % Circle for set B
+        \draw[fill=none] (2.9,0) circle(2.2cm) node[right=3cm] {$B$};
+        
+        % Elements inside set A
+        \node at (-1.5, 0.7) {$\bullet \ 3$};
+        \node at (-1.2, 0.0) {$\bullet \ 4$};
+        \node at (-1.5, -0.7) {$\bullet \ 5$};
+        \node at (-0.6, -1.2) {$\bullet \ 6$};
+        
+        % Elements inside both sets (A ∩ B)
+        \node at (1.5, 0.0) {$\bullet \ 1$};
+        \node at (1.6, -0.7) {$\bullet \ 7$};
+        
+        % Elements inside set B
+        \node at (3.6, 0.7) {$\bullet \ 9$};
+        \node at (3.6, 0.0) {$\bullet \ 10$};
+        \node at (3.6, -0.7) {$\bullet \ 8$};
+        \node at (3.6, -1.5) {$\bullet \ 11$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+
+
+
+
+
+
+\question List the elements of each of these sets:
+
+\begin{minipage}{0.5\textwidth}
+    \begin{parts}
+        \part $A \cap B$
+        \part $B \cup C$
+        \part $B \cap C$
+        \part $A \cap C$
+    \end{parts}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \[
+    A = \{1, 2, 3, 4, 5, 6\}
+    \]
+    \[
+    B = \{4, 5, 6, 7, 8\}
+    \]
+    \[
+    C = \{7, 8, 9, 10\}
+    \]
+\end{minipage}
+
+
+\question From the Venn diagram on the right, write down:
+
+\begin{minipage}{0.5\textwidth}
+    \begin{parts}
+        \part $\#A$
+        \part $\#B$
+        \part $\#(A \cap B)$
+        \part $\#(A \cup B)$
+    \end{parts}
+\end{minipage}
+
+
+
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        % Circle for set A
+        \draw[fill=none] (0,0) circle(2.2cm) node[left=3cm] {$A$};
+        % Circle for set B
+        \draw[fill=none] (3,0) circle(2.2cm) node[right=3cm] {$B$};
+        
+        % Elements inside set A
+        \node at (-1.3, 1.0) {$\bullet \ 8$};
+        \node at (-1.5, 0.5) {$\bullet \ 5$};
+        \node at (-1.5, 0.0) {$\bullet \ 7$};
+        \node at (-1.1, -0.5) {$\bullet \ 9$};
+        
+        % Elements inside both sets (A ∩ B)
+        \node at (1.3, 0.5) {$\bullet \ 1$};
+        \node at (1.35, 0.0) {$\bullet \ 2$};
+        \node at (1.39, -0.5) {$\bullet \ 3$};
+        
+        % Elements inside set B
+        \node at (3.6, 0.7) {$\bullet \ 12$};
+        \node at (3.6, 0.0) {$\bullet \ 16$};
+        \node at (3.6, -0.7) {$\bullet \ 21$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+
+\question Homework is q8 to q18 pages 49 and 50! Make sure you can view in OneNote and answer into your copy. Include a venn diagram whenever you can.
+
+
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{memoir}
+\usepackage[top=25mm, bottom=25mm, left=20mm, right=20mm]{geometry}
+\usepackage{hyperref}
+\usepackage{minted} % For code highlighting (requires -shell-escape enabled in Overleaf)
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    pdftitle={School Maths Old and New},
+    pdfauthor={Your Name}
+}
+
+% Title and author details
+\title{Old School New School Maths}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+% Part 1: Modern Methodologies
+\part{Modern Methodologies in Mathematics Teaching}
+
+\chapter{Universal Design for Learning (UDL)}
+\section{Introduction to UDL}
+Incorporate UDL principles into your mathematics classroom to provide multiple means of engagement, representation, and expression. Explore interactive examples through tools like GeoGebra and Python-based simulations.
+
+\section{Applying UDL in Algebra}
+Here, we'll explore how to differentiate lessons on algebra using Python. Visit this GeoGebra activity: \href{https://www.geogebra.org/classic}{GeoGebra Link}.
+
+\begin{minted}{python}
+# Example Python code for generating algebra problems
+import random
+
+def generate_linear_equation():
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    print(f"Solve for x: {a}x + {b} = 0")
+
+generate_linear_equation()
+\end{minted}
+
+% Part 2: ICT Integration and Problem Solving
+\part{ICT Integration and Problem Solving in Mathematics}
+
+\chapter{Using Python for Problem Solving}
+\section{Why Python?}
+Python is an excellent tool for integrating coding into math lessons. This chapter covers examples of how Python can solve complex mathematical problems, enhance understanding, and provide visualizations.
+
+\section{Python-Based Simulations}
+Engage students with Python simulations that model real-world scenarios, such as graphing functions or simulating probability events.
+
+\begin{minted}{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-10, 10, 100)
+y = x**2
+
+plt.plot(x, y)
+plt.title("Graph of y = x^2")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+\end{minted}
+
+% Part 3: Problem Solving Approach
+\part{Problem Solving Approach in Mathematics}
+
+\chapter{Non-linear Approach to Learning Outcomes}
+\section{Structuring Content Non-Linearly}
+Instead of a linear approach based on learning outcomes, this chapter will focus on problem-solving strategies. Each problem links to various mathematical concepts, encouraging exploration.
+
+\chapter{Interactive Problem Sets with GeoGebra}
+Explore this interactive padlet: \href{https://padlet.com/yourpadletlink}{Problem Solving Padlet}. Use these resources alongside the Python code provided to solve complex equations interactively.
+
+\backmatter
+\chapter{References}
+A collection of all resources, further reading materials, and external links such as \href{https://github.com/YourGithubRepo}{Your GitHub Repository} for the book.
+
+\end{document}

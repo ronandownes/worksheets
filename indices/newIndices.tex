@@ -1,0 +1,150 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{Powers and Roots - From scratch}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ts}{\vspace{6 mm}}
+\newcommand{\ms}{\vspace{11 mm}}
+\newcommand{\bs}{\vspace{22mm}}
+\newcommand{\ls}{\vspace{33 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+
+
+
+
+\newcommand{\cubicwithtps}[3]{
+    \pgfmathtruncatemacro{\a}{3*#1}  % x^2 term (after integration and multiplying by 6)
+    \pgfmathtruncatemacro{\b}{6*#2}  % x term (after integration and multiplying by 6)
+
+    $y = 2x^3 
+    \ifnum\a>0 + \a x^2 \else \a x^2 \fi 
+    \ifnum\b>0 + \b x \else \b x \fi 
+    \ifnum#3>0 + #3 \else #3 \fi$
+}
+
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+\vspace{-18mm}
+
+\begin{questions}
+
+\question Learning intentions- Today we will take a more natural approach to learning powers and roots
+
+\begin{parts}
+\part Powers as repeated multiples
+\part Power equalities
+\part Root equalities
+\part Using Calculator for powers and roots
+\end{parts}
+
+\Large
+
+
+\question Calculate
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $ 2\times 2 \times 2$ \ms
+    \part $ 2^3$ \ms
+    \part \sqrt[3]{8}\ms
+\end{parts}
+\end{multicols}
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $ 3\times 3 \times 3$ \ms
+    \part $ 3^3$ \ms
+    \part \sqrt[3]{27}\ms
+
+
+
+    
+\end{parts}
+\end{multicols}
+\ts
+
+% \question Solve and sketch these positive intercept negative linear terms quadratics by factoring
+
+% \begin{multicols}{3}
+% \begin{parts}\Large
+%     \part $ x^2 -4x+3$ \ms
+%     \part $ x^2 -11x+10$ \ms
+%      \part $x^2 -10x+91$ \ms
+
+% \end{parts}
+% \end{multicols}
+% \ts
+
+
+% \question Solve and sketch these negative intercept quadratics
+
+% \begin{multicols}{3}
+% \begin{parts}\Large
+%     \part $x^2 -4x-5$ \ms
+%    \part $x^2 +8x-9$ \ms
+%     \part $yx^2 -3x-4$ \ms
+% \end{parts}
+% \end{multicols}
+% \ts
+
+% \question Solve and sketch
+% \begin{multicols}{3}
+% \begin{parts}\Large
+%     \part $x^2 +7x+10$ \ms
+%    \part $x^2 +15x+26$ \ms
+%     \part $yx^2 -13x+30$ \ms
+% \end{parts}
+% \end{multicols}
+% \ts
+
+
+
+
+% \question Solve and sketch 
+
+% \begin{multicols}{3}
+% \begin{parts}\Large
+%     \part $x^2 +5x-14$ \ms
+%    \part $x^2 +9x-33$ \ms
+%     \part $yx^2 -2x-35$ \ms
+
+% \end{parts}
+% \end{multicols}
+% \ts
+
+
+
+
+% \question Find the turning points and indicate on a sketch the max and min points
+
+% \begin{multicols}{2}
+% \begin{parts}\Large
+% \part \cubicwithtps{6}{5}{-11}  \ts
+% \part \cubicwithtps{7}{10}{-19}  \ts
+% \part \cubicwithtps{3}{-4}{2}   \ts 
+% \part \cubicwithtps{-5}{-14}{-11}  \ts
+% \part \cubicwithtps{4}{-21}{8}   \ts 
+% \part \cubicwithtps{7}{10}{-19}  \ts
+% \end{parts}
+% \end{multicols}
+% \bs
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{tikz}
+
+% Define a new command for the right triangle
+\newcommand{\righttriangle}[3]{
+    \begin{tikzpicture}
+    \LARGE
+        % Draw the right triangle
+        \draw[thick] (0, 0) -- (#1, 0) -- (0, #2) -- cycle;
+        
+        % Mark the right angle
+        \draw (0, 0) rectangle (0.3, 0.3);
+        
+        % Label the sides with optional hypotenuse or missing side
+        \ifthenelse{\equal{#3}{}}{}{%
+            \draw (#1/2, -0.3) node[below] {#1};  % label the base
+            \draw (-0.3, #2/2) node[left] {#2};   % label the height
+            \draw (#1/2, #2/2) node[right] {#3};  % label the hypotenuse or missing side
+        }
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+% Example usage
+\righttriangle{3}{4}{h}
+
+
+\righttriangle{5}{s}{13}
+
+\end{document}

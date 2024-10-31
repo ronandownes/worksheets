@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage[margin=12mm]{geometry}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{mdframed}
+
+% Command to display a formatted equation based on coefficients and constant
+\newcommand{\formateq}[4]{%
+    \[
+    \begin{aligned}
+        \pgfmathprintnumber{#1}x &\,+\, \pgfmathprintnumber{#2}y \,+\, \pgfmathprintnumber{#3}z &= \pgfmathprintnumber{#4}
+    \end{aligned}
+    \]
+}
+
+% Command to handle solution values and compute constants for each equation
+\newcommand{\generateeqs}[3]{%
+    \def\xsol{#1}
+    \def\ysol{#2}
+    \def\zsol{#3}
+}
+
+% Core command to define equations and compute their values
+\newcommand{\displayeqs}[9]{%
+    \pgfmathsetmacro{\cOne}{#1*\xsol + #2*\ysol + #3*\zsol}
+    \pgfmathsetmacro{\cTwo}{#4*\xsol + #5*\ysol + #6*\zsol}
+    \pgfmathsetmacro{\cThree}{#7*\xsol + #8*\ysol + #9*\zsol}
+
+    % Display each equation using the computed constants
+    \section*{Generated System of Equations:}
+    \formateq{#1}{#2}{#3}{\cOne}
+    \formateq{#4}{#5}{#6}{\cTwo}
+    \formateq{#7}{#8}{#9}{\cThree}
+}
+
+\begin{document}
+
+\section*{Consistent System of Equations}
+
+% Define the solution values: (x, y, z) = (2, 3, -1)
+\generateeqs{1}{1}{1}
+
+% Display the system of equations with coefficients
+% Coefficients for equation 1: 1, 2, -1
+% Coefficients for equation 2: -3, 4, 2
+% Coefficients for equation 3: 2, -1, 5
+\displayeqs{1}{2}{3}
+{4}{5}{6}
+{7}{8}{9}
+
+\end{document}

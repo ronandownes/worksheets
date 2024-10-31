@@ -1,0 +1,163 @@
+\documentclass[12pt, a4paper]{exam}
+% Title definition
+
+\usepackage{fontawesome5} % For the fire icon
+
+
+% Title definition with fire symbol
+\newcommand{\givetitle}{\begin{center} \Large Factors - Hot Topic \faFire \end{center}}
+
+
+\usepackage{multicol}
+\usepackage{pgfmath} % For random number generation
+
+% Define the monic quadratic function with correct sign handling
+\newcommand{\monicquad}[2]{%
+    x^2%
+    \ifnum\numexpr#1+#2>0 + \the\numexpr#1+#2\relax \else \ifnum\numexpr#1+#2<0 \the\numexpr#1+#2\relax \fi\fi%
+    \ifnum\numexpr#1+#2=0 \else x\fi%
+    \ifnum\numexpr#1*#2>0 + \the\numexpr#1*#2\relax \else \ifnum\numexpr#1*#2<0 \the\numexpr#1*#2\relax \fi\fi%
+}
+\date{}
+\pagestyle{empty}
+\newcommand{\tinyspace}{\vspace{2mm}}
+\newcommand{\scriptsizespace}{\vspace{4mm}}
+\newcommand{\footnotesizespace}{\vspace{12mm}}
+\newcommand{\largespace}{\vspace{22mm}}
+\newcommand{\Largespace}{\vspace{44mm}}
+\newcommand{\LARGEspace}{\vspace{54mm}}
+\newcommand{\hugespace}{\vspace{64mm}}
+\newcommand{\Hugespace}{\vspace{84mm}}
+\begin{document}
+\givetitle
+% \tiny This is tiny text. \\
+% \scriptsize This is scriptsize text. \\
+% \footnotesize This is footnotesize text. \\
+% \small This is small text. \\
+% \normalsize This is normal size text. \\
+% \large This is large text. \\
+% \Large This is Large text. \\
+% \LARGE This is LARGE text. \\
+% \huge This is huge text. \\
+% \Huge This is Huge text.
+\begin{questions}
+\question 
+$x^2 + x +c$ \quad
+ $(x + \hspace{11} )(x+\hspace{11} )$  factors \quad
+$x= - $ or \(-\)   roots\quad
+   \quad parabola totally to left
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{1}{7}$ 
+    \part $\monicquad{  1 }{  5  }$ 
+       \part $\monicquad{  1 }{  8  }$ 
+        \end{multicols}\Largespace
+        \begin{multicols}{3}
+            \part $\monicquad{  2 }{   5 }$ 
+                 \part $\monicquad{ 2 }{  7  }$ 
+                    \part $\monicquad{5 }{  7  }$ 
+\end{multicols}
+\end{parts}
+\Largespace
+\question 
+$x^2 - x +c$ \quad
+ $(x - \hspace{11} )(x-\hspace{11} )$  factors \quad
++ +  roots\quad
+   \quad parabola totally to right
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{-1 }{-7  }$  
+    \part $\monicquad{- 1}{-5  }$ 
+        \part $\monicquad{- 9}{-1 }$ 
+        \end{multicols}\Largespace
+        \begin{multicols}{3}
+            \part $\monicquad{-3 }{- 5 }$ 
+                  \part $\monicquad{- 3}{- 11 }$ 
+                  \part $\monicquad{-2 }{- 9 }$ 
+\end{multicols}
+\end{parts}
+\Largespace
+
+
+
+
+\newpage
+
+
+
+
+\question 
+$x^2 - x -c$ \quad
+ $(x+\text{small} )(x - \text{big} )$  \quad
+ roots  -small +big
+   \quad parabola shifted to left
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $\monicquad{1 }{-7  }$  
+    \part $\monicquad{1}{-5  }$ 
+        \part $\monicquad{- 9}{1 }$ 
+        \end{multicols}\Largespace
+        \begin{multicols}{3}
+            \part $\monicquad{3 }{- 5 }$ 
+                  \part $\monicquad{ 3}{- 11 }$ 
+                  \part $\monicquad{2 }{- 9 }$ 
+\end{multicols}
+\end{parts}
+\largespace
+
+\question 
+$x^2 + x -c$ \quad
+ $(x+\text{big} )(x - \text{small} )$  \quad
+ roots  -big  +small
+   \quad parabola shifted to left
+
+\begin{parts}\Large
+\begin{multicols}{3}
+ \part $\monicquad{1}{7}$ 
+    \part $\monicquad{  1 }{  5  }$ 
+       \part $\monicquad{  1 }{  8  }$ 
+           \end{multicols}\Largespace
+        \begin{multicols}{3}    
+            \part $\monicquad{  2 }{   5 }$ 
+                 \part $\monicquad{ 2 }{  7  }$ 
+                    \part $\monicquad{5 }{  7  }$ 
+
+\end{multicols}
+\end{parts}
+
+\largespace
+% \tiny This is tiny text. \\
+% \scriptsize This is scriptsize text. \\
+\footnotesize 
+% \small This is small text. \\
+% \normalsize This is normal size text. \\
+% \question 
+
+
+\begin{parts}
+\begin{multicols}{4}
+    \part $\monicquad{1}{7}$ 
+    \part $\monicquad{  1 }{ 4  }$  
+            \part $\monicquad{  2 }{   4 }$  
+                    \part $\monicquad{5 }{  3  }$ 
+ \part $\monicquad{ -1}{ -9  } $\part $\monicquad{ -1}{ -12  }   \part $\monicquad{ -1}{ - 4 }  $        
+           \part $\monicquad{ -3}{ -5  } \part $\monicquad{ -3}{ -12  }   \part $\monicquad{ -7}{ - 4 } \part $\monicquad{-1 }{6 }$  
+    \part $\monicquad{- 1}{3  }$ 
+        \part $\monicquad{-1}{11 }$ 
+            \part $\monicquad{-2 }{ 12 }$ 
+                  \part $\monicquad{-3}{6 }$ 
+                  \part $\monicquad{1 }{-8 }$ 
+ \part $\monicquad{- 5  }{1 } $        \part $\monicquad{- 5  }{1 }$
+  \part $\monicquad{- 11  }{3}$
+\end{multicols}
+\end{parts}
+
+\Largespace
+
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage[margin=12mm]{geometry}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{mdframed}
+
+% Define a custom command to generate elimination problems
+\newcommand{\elimination}[6]{%
+    \pgfmathsetmacro{\cval}{#3*#1 + #4*#2} % Calculate the constant for the first equation
+    \pgfmathsetmacro{\pval}{#5*#1 + #6*#2} % Calculate the constant for the second equation
+
+    \def\formata{%
+        \ifnum#3=1
+            x
+        \else\ifnum#3=-1
+            -x
+        \else
+            \pgfmathprintnumber{#3}x
+        \fi\fi}
+
+    \def\formatb{%
+        \ifnum#4=1
+            +y
+        \else\ifnum#4=-1
+            -y
+        \else
+            \ifnum#4<0 \pgfmathprintnumber{#4}y \else +\pgfmathprintnumber{#4}y \fi
+        \fi\fi}
+
+    \def\formatd{%
+        \ifnum#5=1
+            x
+        \else\ifnum#5=-1
+            -x
+        \else
+            \pgfmathprintnumber{#5}x
+        \fi\fi}
+
+    \def\formate{%
+        \ifnum#6=1
+            +y
+        \else\ifnum#6=-1
+            -y
+        \else
+            \ifnum#6<0 \pgfmathprintnumber{#6}y \else +\pgfmathprintnumber{#6}y \fi
+        \fi\fi}
+
+    \[
+    \begin{aligned}
+    \formata \formatb &= \pgfmathprintnumber{\cval} \\[-1pt]
+    \formatd \formate &= \pgfmathprintnumber{\pval}
+    \end{aligned}
+    \]
+}
+
+\begin{document}
+
+% Title and student information layout
+\noindent
+\begin{minipage}{0.3\textwidth}
+\section*{Elimination Test}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\raggedleft
+\textbf{Student's Name:} \underline{\hspace{7cm}} \\[0.2cm]
+\textbf{Percentage:} \underline{\hspace{7cm}} \\
+\end{minipage}
+
+% Remove unnecessary vertical spacing
+% \vspace{11mm} % Commented this line to remove extra space
+
+% Framed box for steps
+\begin{mdframed}[backgroundcolor=gray!20, roundcorner=5pt]
+\textbf{Steps for Solving Using Elimination:}
+\begin{multicols}{2}
+\Large
+\begin{enumerate}
+    \item 15 marks for one variable correct
+    \item 25 marks for both correct
+\end{enumerate}
+\end{multicols}
+\end{mdframed}
+
+% Define vertical spacing for better layout
+\newcommand{\verticalspace}{\vspace{60mm}}  % Adjusted for balanced spacing
+
+\huge
+\begin{questions}
+\question Use  elimination  to solve all four.
+
+
+\begin{parts}
+\part \elimination{3}{2}{1}{3}{-1}{4} \verticalspace
+\part \elimination{2}{1}{3}{6}{5}{-6}\verticalspace
+\part \elimination{6}{2}{3}{1}{2}{-3} \verticalspace
+\part \elimination{6}{2}{3}{5}{4}{-3}\verticalspace
+\end{parts}
+
+
+\end{questions}
+
+\end{document}

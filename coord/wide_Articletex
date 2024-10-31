@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+% Define the wide command
+\newcommand{\wide}[1]{% 
+\begin{tikzpicture}
+    \draw[step=1cm, gray, very thin] (0,0) grid (#1,#1);
+    \pgfmathsetmacro{\yone}{random(0,#1)}
+    \pgfmathsetmacro{\ytwo}{random(0,#1)}
+    \draw[black, thick] (0,\yone) -- (#1,\ytwo); % Line segment from (0,y1) to (#1,y2)
+    \filldraw [black] (0,\yone) circle (2pt); % Endpoint at (0,y1)
+    \filldraw [black] (#1,\ytwo) circle (2pt); % Endpoint at (#1,y2)
+\end{tikzpicture}
+}
+
+% Example of using the command
+\wide{11}
+
+\end{document}

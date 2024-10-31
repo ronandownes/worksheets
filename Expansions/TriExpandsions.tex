@@ -1,0 +1,201 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\pagestyle{empty} % Suppress page numbers
+
+\usepackage[margin=15mm]{geometry} % Set all margins to 15mm
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\usepackage[margin=15mm]{geometry}
+% Define the \expandbinomials command
+
+
+\input{command_factors}
+\begin{document}
+\section{ $Ax^2 + Bx +C$ where the y-intercept is positive In each case below solve for the roots using the factors method and sketch the graphs.} 
+
+\begin{questions}
+\LARGE
+
+\question   $A+C=B$ When the ends  sum to the centre. 
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+% Answer all \numparts   parts.
+\part \expandbinomials{1}{1}{2}{3}  \vspace{45mm}
+\part \expandbinomials{1}{1}{2}{5}  \vspace{45mm}
+\part \expandbinomials{1}{1}{2}{7}  \vspace{45mm}
+\part \expandbinomials{1}{1}{2}{11} \vspace{45mm}
+\part \expandbinomials{1}{1}{2}{13} \vspace{45mm}
+\part \expandbinomials{1}{1}{3}{5} 
+\end{multicols}
+\end{parts}
+\vspace{45mm}
+
+\question  Look for common patterns in the questions above. Where do A and C end up in your roots? What factor is common to all. What is the non-trivial root?
+
+
+
+
+\newpage
+
+
+\question   $A+C=-B$  Negative of outer sum is middle. What sign are both factors set to?
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+\part \expandbinomials{1}{-1}{3}{-7}  \vspace{45mm}
+\part \expandbinomials{1}{-1}{3}{-11} \vspace{45mm}
+\part \expandbinomials{1}{-1}{3}{-13} \vspace{45mm}
+\part \expandbinomials{1}{-1}{5}{-7} \vspace{45mm}
+\part \expandbinomials{1}{-1}{5}{-11} \vspace{45mm}
+\part \expandbinomials{1}{-1}{5}{-13} \vspace{45mm}
+% \part \expandbinomials{1}{1}{7}{11} 
+% \part \expandbinomials{1}{1}{7}{13} 
+% \part \expandbinomials{1}{1}{11}{13}
+\end{parts}
+\end{multicols}
+\question  Look for common patterns in the questions above. Where do A and C end up in your roots? What factor is common to all. What is the non-trivial root?
+
+% \makebox[3cm]{\hrulefill}
+\newpage
+
+\question Positive Central Difference Cases.  
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+\part \expandbinomials{1}{1}{8}{-5}  \vspace{22mm}
+\part \expandbinomials{1}{-1}{3}{11} \vspace{22mm}
+\part \expandbinomials{1}{-1}{8}{15} \vspace{22mm}
+\part \expandbinomials{1}{1}{9}{-7} \vspace{22mm}
+% \part \expandbinomials{1}{1}{11}{-5} \vspace{22mm}
+% \part \expandbinomials{1}{-1}{4}{9} \vspace{22mm}
+\end{parts}
+\end{multicols}
+
+\question Negative Central Difference Cases. 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+
+\part \expandbinomials{1}{1}{4}{-13} \vspace{22mm}
+\part \expandbinomials{1}{-1}{11}{7} \vspace{22mm}
+\part \expandbinomials{1}{1}{7}{-9} \vspace{22mm}
+\part \expandbinomials{1}{1}{11}{-13}\vspace{22mm}
+% \expandbinomials{1}{1}{6}{-11}\vspace{22mm}
+% \expandbinomials{1}{1}{5}{-7}\vspace{22mm}
+% \expandbinomials{1}{-1}{7}{2}\vspace{22mm}
+% \expandbinomials{1}{-1}{11}{3}\vspace{22mm}
+\end{parts}
+\end{multicols}
+\question How is the sign of the dominant cross product related to the sign of the $x$ term in both questions above?
+\newpage
+
+% \question Monic or $x^2$  quadratic negative constant trivial case. 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{1}{1}{1}{-7}  \vspace{45mm}
+% \part \expandbinomials{1}{1}{1}{-6} \vspace{45mm}
+% \part \expandbinomials{1}{1}{1}{5} \vspace{45mm}
+% \part \expandbinomials{1}{1}{1}{-7} \vspace{45mm}
+% \part \expandbinomials{1}{1}{1}{3} \vspace{45mm}
+% \part \expandbinomials{1}{1}{1}{13} \vspace{45mm}
+% \part \expandbinomials{1}{-1}{1}{11} \vspace{45mm}
+% \part \expandbinomials{1}{-1}{1}{13} \vspace{45mm}
+% \part \expandbinomials{1}{-1}{1}{13}\vspace{45mm}
+% \end{parts}
+% \end{multicols}
+
+% \newpage
+
+
+
+\question Trivial  ($x^2 +Bx +C$ )   case. 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{1}{1}{1}{17}  \vspace{25mm}
+\part \expandbinomials{1}{1}{1}{19} \vspace{25mm}
+ \part \expandbinomials{1}{1}{1}{20} \vspace{25mm}
+% \part \expandbinomials{1}{1}{1}{29} 
+
+\end{parts}
+\end{multicols}
+\vspace{25mm}
+
+
+
+\question Trivial  ($Ax^2 +Bx +1$ )   case. 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{5}{1}{1}{1}  \vspace{25mm}
+\part \expandbinomials{16} {1}{1}{1}\vspace{25mm}
+\part \expandbinomials{40}{1}{1}{1} \vspace{25mm}
+% \part \expandbinomials{59} {1}{1}{1}
+
+\end{parts}
+\end{multicols}
+\vspace{25mm}
+
+\question Trivial  ($Ax^2 /pm Bx -1$ )   case.
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{5}{1}{1}{-1}  \vspace{35mm}
+\part \expandbinomials{11}{-1}{1}{1} \vspace{35mm}
+\part \expandbinomials{42}{1}{1}{-1}  \vspace{35mm}
+% \part \expandbinomials{8}{1}{1}{-1} \vspace{35mm}
+\end{parts}
+\end{multicols}
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\question Simplest  $x^2$ with negative constant case in where improper factors are needed? 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{1}{1}{1}{-7}  \vspace{45mm}
+\part \expandbinomials{1}{1}{1}{-6} \vspace{45mm}
+\part \expandbinomials{1}{1}{1}{-30} \vspace{45mm}
+\part \expandbinomials{1}{1}{1}{-37} \vspace{45mm}
+
+\end{parts}
+\end{multicols}
+
+
+\question  Simplest case for $-1$ constant. 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{5}{1}{1}{-1}  \vspace{45mm}
+\part \expandbinomials{11}{-1}{1}{1} \vspace{45mm}
+\part \expandbinomials{42}{1}{1}{-1}  \vspace{45mm}
+\part \expandbinomials{8}{1}{1}{-1} \vspace{45mm}
+
+\end{parts}
+\end{multicols}
+\newpage
+
+
+
+\end{questions}
+
+\end{document}

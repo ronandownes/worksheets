@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{Counting arrangement of r objects from n distinct objects}
+
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\usepackage{array}     % For centering text vertically
+\usepackage{graphicx}  % For rotating text
+
+% Define your custom spacing commands properly
+\newcommand{\ms}{\vspace{20mm}}
+\newcommand{\bs}{\vspace{30mm}}
+\newcommand{\ls}{\vspace{30mm}}
+\newcommand{\hs}{\vspace{30mm}}
+
+\date{}
+\begin{document}
+
+\maketitle
+\vspace{-28mm}
+
+\large
+
+\begin{questions}
+
+\question Write these Learning Outcomes out several times 
+\Large
+\begin{parts}
+\part Counting the arrangements of n distinct objects $(n!)$
+\part Counting the number of ways of arranging r objects from n distinct objects
+\end{parts}
+
+\question How many ways can the letters in the following words be arranged
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part Dog (3 letters)
+   \part Card (4 letters)
+   \part Plate (5 letters)
+   \part Bridge (6 letters)
+   \part Lantern (7 letters)
+   \part Hospital (8 letters)
+   \part Trampoline (9 letters)
+   \part Adventure (10 letters)
+   \part Basketworld (11 letters)
+   \part Considerable (12 letters)
+\end{parts}
+\end{multicols}
+
+\question How many ways can you arrange \( r \) objects from \( n \) distinct objects? Use the appropriate formula to calculate each.
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part Arrange 2 objects from 5 distinct objects.
+    \part Arrange 3 objects from 6 distinct objects.
+    \part Arrange 4 objects from 7 distinct objects.
+    \part Arrange 5 objects from 8 distinct objects.
+    \part Arrange 6 objects from 9 distinct objects.
+    \part Arrange 3 objects from 10 distinct objects.
+    \part Arrange 4 objects from 12 distinct objects.
+    \part Arrange 5 objects from 15 distinct objects.
+\end{parts}
+\end{multicols}
+
+\question In the following scenarios, calculate the number of ways to arrange \( r \) objects from \( n \) distinct objects:
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part A bookshelf has 5 distinct books. In how many ways can you select and arrange 2 of these books on a table?
+    \part A team of 6 athletes needs to choose and arrange 3 of them for a relay race. How many possible arrangements are there?
+    \part From a group of 7 paintings, how many ways can you select and arrange 4 of them for a display in an art gallery?
+    \part A chess tournament has 8 players. In how many ways can you choose and arrange 5 of them to compete in a special exhibition match?
+    \part A company has 9 distinct products. How many ways can the marketing team arrange 6 of these products for a promotional photo?
+    \part From a deck of 10 distinct cards, how many ways can you choose and arrange 3 cards for a special hand?
+\end{parts}
+\end{multicols}
+
+\end{questions}
+
+\end{document}

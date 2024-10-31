@@ -1,0 +1,74 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{Turing points and Solve Simultanous equations by substitution}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ts}{\vspace{22 mm}}
+\newcommand{\ms}{\vspace{33 mm}}
+\newcommand{\bs}{\vspace{44mm}}
+\newcommand{\ls}{\vspace{44 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+
+\newcommand{\monicquad}[2]{x^2 - (#1 + #2)x + #1#2}
+\newcommand{\cubicwithtps}[3]{
+    \pgfmathtruncatemacro{\a}{3*#1}  % x^2 term (after integration and multiplying by 6)
+    \pgfmathtruncatemacro{\b}{6*#2}  % x term (after integration and multiplying by 6)
+
+    $y = 2x^3 
+    \ifnum\a>0 + \a x^2 \else \a x^2 \fi 
+    \ifnum\b>0 + \b x \else \b x \fi 
+    \ifnum#3>0 + #3 \else #3 \fi$
+}
+
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+\vspace{-18mm}
+
+\begin{questions}
+
+\question Learning objectives-Recall, understand, and apply
+\begin{multicols}{3}
+\begin{parts}
+\part First and second derivative notation
+\part Find turning points
+\part Simultaneous Equations with substitute method 
+\end{parts}
+\end{multicols}
+
+
+\question Find the turning points and indicate on a sketch the max and min points
+
+\begin{multicols}{2}
+\begin{parts}\Large
+\part \cubicwithtps{6}{5}{-11}  \ts
+\part \cubicwithtps{7}{10}{-19}  \ts
+\part \cubicwithtps{3}{-4}{2}   \ts 
+\part \cubicwithtps{-5}{-14}{-11}  \ts
+\part \cubicwithtps{4}{-21}{8}   \ts 
+\part \cubicwithtps{7}{10}{-19}  \ts
+\part \cubicwithtps{-11}{10}{-9}  \ts
+
+\end{parts}
+\end{multicols}
+\bs
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+
+% Randomize seed using the current time
+\pgfmathsetseed{\number\time}
+
+% Define commands for different expansions
+
+% Monicpositivefactor lead, Nonmonicpositivefactor trail
+\newcommand{\monicleadnonmonictrail}{%
+    \pgfmathtruncatemacro{\a}{random(2,5)} % Random non-monic coefficient for a
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant for monic
+    \pgfmathtruncatemacro{\c}{random(1,5)} % Random constant for non-monic
+    \edef\result{(x + \b)(\a x + \c)}%
+    \result
+}
+
+% Nonmonicpositivefactor lead, Monicnegativefactor trail
+\newcommand{\nonmonicleadmonictrail}{%
+    \pgfmathtruncatemacro{\a}{random(2,5)} % Random non-monic coefficient for a
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant for non-monic
+    \pgfmathtruncatemacro{\c}{random(1,5)} % Random constant for monic
+    \edef\result{(\a x + \b)(x - \c)}%
+    \result
+}
+
+% Monicpositivefactor lead and trail (perfect square)
+\newcommand{\monicpositiveleadtrail}{%
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant
+    \edef\result{(x + \b)(x + \b)}%
+    \result
+}
+
+% Monicnegativefactor lead and trail (perfect square)
+\newcommand{\monicnegativeleadtrail}{%
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant
+    \edef\result{(x - \b)(x - \b)}%
+    \result
+}
+
+% Nonmonicpositivefactor lead and trail
+\newcommand{\nonmonicpositiveleadtrail}{%
+    \pgfmathtruncatemacro{\a}{random(2,5)} % Random non-monic coefficient
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant
+    \edef\result{(\a x + \b)(\a x + \b)}%
+    \result
+}
+
+% Nonmonicnegativefactor lead and trail
+\newcommand{\nonmonicnegativeleadtrail}{%
+    \pgfmathtruncatemacro{\a}{random(2,5)} % Random non-monic coefficient
+    \pgfmathtruncatemacro{\b}{random(1,5)} % Random constant
+    \edef\result{(\a x - \b)(\a x - \b)}%
+    \result
+}
+
+\begin{document}
+
+\section*{Expand and Break Down Using FOIL}
+\quad Student's Name: \underline{\hspace{5cm}}
+
+\begin{questions}
+\LARGE
+
+% Question 1: Monic Positive Lead, Non-Monic Positive Trail
+\question
+Expand the following using FOIL and break down the steps (First, Outer, Inner, Last):
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part \( \monicleadnonmonictrail \)
+    \ps
+    % First: x * ax = ax^2
+    % Outer: x * c = xc
+    % Inner: b * ax = abx
+    % Last: b * c = bc
+\end{parts}
+\end{multicols}
+
+% Question 2: Non-Monic Positive Lead, Monic Negative Trail
+\question Non-Monic Positive Lead, Monic Negative Trail
+Expand the following using FOIL and break down the steps (First, Outer, Inner, Last):
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part \( \nonmonicleadmonictrail \)
+    \ps
+    % First: ax * x = ax^2
+    % Outer: ax * -c = -acx
+    % Inner: b * x = bx
+    % Last: b * -c = -bc
+\end{parts}
+\end{multicols}
+
+% Question 3: Monic Positive Perfect Square
+\question Monic Positive Perfect Square
+Expand the following using FOIL and break down the steps:
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part \( \monicpositiveleadtrail \)
+    \ps
+    % First: x * x = x^2
+    % Outer: x * b = xb
+    % Inner: b * x = bx
+    % Last: b * b = b^2
+\end{parts}
+\end{multicols}
+
+% Question 4: Non-Monic Negative Perfect Square
+\question
+Expand the following using FOIL and break down the steps:
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part \( \nonmonicnegativeleadtrail \)
+    \ps
+    % First: ax * ax = a^2x^2
+    % Outer: ax * -b = -abx
+    % Inner: -b * ax = -abx
+    % Last: -b * -b = b^2
+\end{parts}
+\end{multicols}
+
+\end{questions}
+
+\end{document}

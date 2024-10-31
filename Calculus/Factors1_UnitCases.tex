@@ -1,0 +1,164 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[ddmmyy, useregional]{datetime}
+\title{Factor, Solve and Sketch  $x^2+bx+c=0$ \dayofweekname{\day}{\month}{\year} \today}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ts}{\vspace{22 mm}}
+\newcommand{\ms}{\vspace{33 mm}}
+\newcommand{\bs}{\vspace{44mm}}
+\newcommand{\ls}{\vspace{44 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+
+\newcommand{\monicquad}[2]{x^2 - (#1 + #2)x + #1#2}
+\newcommand{\cubicwithtps}[3]{
+    \pgfmathtruncatemacro{\a}{3*#1}  % x^2 term (after integration and multiplying by 6)
+    \pgfmathtruncatemacro{\b}{6*#2}  % x term (after integration and multiplying by 6)
+
+    $y = 2x^3 
+    \ifnum\a>0 + \a x^2 \else \a x^2 \fi 
+    \ifnum\b>0 + \b x \else \b x \fi 
+    \ifnum#3>0 + #3 \else #3 \fi$
+}
+\usepackage{mdframed}
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+\maketitle
+
+\vspace{-18mm}
+\noindent 
+In todays class we connect  numerical, graphical and algebraic concepts to improve your fluency, enrich  your knowledge and deepen your understanding of finding and applying solutions to quadratic equations
+\begin{questions}
+
+
+% \section*{Circle-Test:    \quad  Students Name_ \underline{\hspace{8cm}}}
+
+\begin{mdframed}[backgroundcolor=gray!10] % Light grey background
+% \textbf{Learning Intentions and keywords:}
+\scriptsize
+\setlength{\columnsep}{2pt}
+\begin{multicols}{4}
+\begin{itemize}
+\item  Expanding and factoring are inverse operations
+\item Vieta's formulas: $x^2 + bx + c = 0$, the \textbf{sum of the roots} is $-b$ and the \textbf{product of the roots} is $c$.
+\item Special cases when a   root is \(+ 1  \textbf{ or } -1\)
+\item Otherwise proper factors with  sum or difference linear coifficient
+\item   $\mathbb{N}$ with addition and subtraction
+is simpler than  $\mathbb{Z}$ approach
+\item \(  x^2 + bx + c \)  is in descending power in x
+\item Connect special cases with multiples of 11
+    \item Same-sign positive factors
+    \item Mixed-sign positive dominated factors
+   \item Mixed-sign negative dominated factors
+    \item Zero-product rule
+    \item Roots of an equation
+    \item Sketching quadratice
+    \item Parabola
+    \item Expanded form, factored form and vertex form
+\end{itemize}
+\end{multicols}
+
+
+
+\end{mdframed}
+
+
+
+
+
+\question Special  case  of  positive factors where one factor  is \((x+1) \).
+
+
+\begin{parts}\Large
+\begin{multicols}{3}
+    \part $ x^2 +8x  + 7$ \ms
+    \part $ x^2 +13x + 12$ \ms
+    \part $x^2 + 18+ 19x  $ \ms
+\end{multicols} \ms
+% \part \small What  properties are common in this case? 
+\end{parts}
+
+\ts
+
+\question Special  case  of negative factors where one factor is \((x-1) \). 
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 - 4x + 3$ \ms
+    \part $x^2 - 11x + 10$ \ms
+    \part $x^2  + 10- 11x $ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+% \resizebox{\textwidth}{!}{Your}
+
+\question Mixed-sign  with  \((x+1) \) special case. 
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 -4x-5$ \ms
+   \part $x^2 -8x-9$ \ms
+    \part $x^2 -23x-24$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+\question Special  case  of mixed-sign  factors where one factor is \((x-1) \). 
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 +7x+10$ \ms
+   \part $x^2 +15x+26$ \ms
+    \part $x^2 -13x+30$ \ms
+\end{parts}
+\end{multicols}
+\ts
+
+
+
+
+\question Solve and sketch 
+
+\begin{multicols}{3}
+\begin{parts}\Large
+    \part $x^2 +5x-14$ \ms
+   \part $x^2 +9x-33$ \ms
+    \part $yx^2 -2x-35$ \ms
+
+\end{parts}
+\end{multicols}
+\ts
+
+
+
+
+\question Find the turning points and indicate on a sketch the max and min points
+
+\begin{multicols}{2}
+\begin{parts}\Large
+\part \cubicwithtps{6}{5}{-11}  \ts
+\part \cubicwithtps{7}{10}{-19}  \ts
+\part \cubicwithtps{3}{-4}{2}   \ts 
+\part \cubicwithtps{-5}{-14}{-11}  \ts
+\part \cubicwithtps{4}{-21}{8}   \ts 
+\part \cubicwithtps{7}{10}{-19}  \ts
+\end{parts}
+\end{multicols}
+\bs
+
+
+\end{questions}
+
+\end{document}

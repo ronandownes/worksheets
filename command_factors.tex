@@ -1,0 +1,186 @@
+
+\newcommand{\smallvspace}{\vspace{5mm}}
+\newcommand{\normalvspace}{\vspace{10mm}}
+\newcommand{\largevspace}{\vspace{15mm}}
+\newcommand{\Largevspace}{\vspace{25mm}}
+\newcommand{\LARGEvspace}{\vspace{55mm}}
+\newcommand{\hugevspace}{\vspace{45mm}}
+\newcommand{\Hugevspace}{\vspace{55mm}}
+\newcommand{\twoup}{\vspace{75mm}}
+
+\newcommand{\expandbinomialsold}[4]{%
+    % Compute intermediate terms (A, B, C)
+    \pgfmathparse{int(#1*#3)} \let\A\pgfmathresult  % A = a*c
+    \pgfmathparse{int(#1*#4 + #2*#3)} \let\B\pgfmathresult  % B = a*d + b*c
+    \pgfmathparse{int(#2*#4)} \let\C\pgfmathresult  % C = b*d
+
+    % Compute absolute values and cast to integer
+    \pgfmathparse{int(abs(\A))} \let\absA\pgfmathresult
+    \pgfmathparse{int(abs(\B))} \let\absB\pgfmathresult
+    \pgfmathparse{int(abs(\C))} \let\absC\pgfmathresult
+
+    % Handle the signs for A, B, C
+    \ifnum\A>0 \def\signA{} \else \def\signA{-} \fi
+    \ifnum\B>0 \def\signB{+} \else \def\signB{-} \fi
+    \ifnum\C>0 \def\signC{+} \else \def\signC{-} \fi
+
+    % Print the quadratic expression in math mode
+    \[
+    \signA
+    \ifnum\A=1
+        x^2
+    \else
+        \pgfmathprintnumber{\A}x^2
+    \fi
+    \ifnum\B=0
+    \else
+        \signB
+        \ifnum\absB=1
+            x
+        \else
+            \pgfmathprintnumber{\absB}x
+        \fi
+    \fi
+    \ifnum\C=0
+    \else
+        \signC\pgfmathprintnumber{\absC}
+    \fi
+    \]  
+
+}
+
+
+
+
+\newcommand{\expandbinomials}[4]{%
+    % Compute intermediate terms (A, B, C)
+    \pgfmathparse{int(#1*#3)} \let\A\pgfmathresult  % A = a*c
+    \pgfmathparse{int(#1*#4 + #2*#3)} \let\B\pgfmathresult  % B = a*d + b*c
+    \pgfmathparse{int(#2*#4)} \let\C\pgfmathresult  % C = b*d
+
+    % Compute absolute values and cast to integer
+    \pgfmathparse{int(abs(\A))} \let\absA\pgfmathresult
+    \pgfmathparse{int(abs(\B))} \let\absB\pgfmathresult
+    \pgfmathparse{int(abs(\C))} \let\absC\pgfmathresult
+
+    % Handle the signs for A, B, C
+    \ifnum\A>0 \def\signA{} \else \def\signA{-} \fi
+    \ifnum\B>0 \def\signB{+} \else \def\signB{-} \fi
+    \ifnum\C>0 \def\signC{+} \else \def\signC{-} \fi
+
+    % Print the quadratic expression in inline math mode
+    $ \signA
+    \ifnum\A=1
+        x^2
+    \else
+        \pgfmathprintnumber{\A}x^2
+    \fi
+    \ifnum\B=0
+    \else
+        \signB
+        \ifnum\absB=1
+            x
+        \else
+            \pgfmathprintnumber{\absB}x
+        \fi
+    \fi
+    \ifnum\C=0
+    \else
+        \signC\pgfmathprintnumber{\absC}
+    \fi
+    $  
+}
+
+
+
+
+
+
+
+
+
+\newcommand{\productbinomials}[4]{%
+    \[
+    \left(
+    \ifnum#1=1
+        x
+    \else
+        \pgfmathprintnumber{#1}x
+    \fi
+    \ifnum#2>0
+        +\pgfmathprintnumber{#2}
+    \else\ifnum#2<0
+        -\pgfmathprintnumber{-#2}
+    \fi\fi
+    \right)
+    \left(
+    \ifnum#3=1
+        x
+    \else
+        \pgfmathprintnumber{#3}x
+    \fi
+    \ifnum#4>0
+        +\pgfmathprintnumber{#4}
+    \else\ifnum#4<0
+        -\pgfmathprintnumber{-#4}
+    \fi\fi
+    \right)
+    = 
+    \pgfmathparse{#1*#3} \pgfmathprintnumber{\pgfmathresult}x^2
+    \pgfmathparse{#1*#4 + #2*#3}
+    \ifnum\pgfmathresult>0
+        +\pgfmathprintnumber{\pgfmathresult}x
+    \else
+        \pgfmathprintnumber{\pgfmathresult}x
+    \fi
+    \pgfmathparse{#2*#4}
+    \ifnum\pgfmathresult>0
+        +\pgfmathprintnumber{\pgfmathresult}
+    \else
+        \pgfmathprintnumber{\pgfmathresult}
+    \fi
+    \]
+}
+
+
+
+\newcommand{\expandbinomialsequation}[4]{%
+    % Compute intermediate terms (A, B, C)
+    \pgfmathparse{int(#1*#3)} \let\A\pgfmathresult  % A = a*c
+    \pgfmathparse{int(#1*#4 + #2*#3)} \let\B\pgfmathresult  % B = a*d + b*c
+    \pgfmathparse{int(#2*#4)} \let\C\pgfmathresult  % C = b*d
+
+    % Compute absolute values and cast to integer
+    \pgfmathparse{int(abs(\A))} \let\absA\pgfmathresult
+    \pgfmathparse{int(abs(\B))} \let\absB\pgfmathresult
+    \pgfmathparse{int(abs(\C))} \let\absC\pgfmathresult
+
+    % Handle the signs for A, B, C
+    \ifnum\A>0 \def\signA{} \else \def\signA{-} \fi
+    \ifnum\B>0 \def\signB{+} \else \def\signB{-} \fi
+    \ifnum\C>0 \def\signC{+} \else \def\signC{-} \fi
+
+    % Print the quadratic expression in math mode with "= 0"
+    \[
+    \signA
+    \ifnum\A=1
+        x^2
+    \else
+        \pgfmathprintnumber{\A}x^2
+    \fi
+    \ifnum\B=0
+    \else
+        \signB
+        \ifnum\absB=1
+            x
+        \else
+            \pgfmathprintnumber{\absB}x
+        \fi
+    \fi
+    \ifnum\C=0
+    \else
+        \signC\pgfmathprintnumber{\absC}
+    \fi
+    = 0
+    \]   
+}

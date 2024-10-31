@@ -1,0 +1,221 @@
+% Expand pair of binomials
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+
+
+
+
+
+
+
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+
+
+% Randomize seed using the current time
+% \pgfmathsetseed{\number\time}
+ \pgfmathsetseed{5}
+
+
+
+\usepackage{multicol} % For multi-column layout
+\newcommand{\vs}{\vspace{26mm}}
+\newcommand{\ps}{\vspace{6mm}}
+\newcommand{\qs}{\vspace{26mm}}
+
+
+% Define random prime number from the set {2, 3, 5, 7, 11, 13,17,19}
+\newcommand{\randprime}{%
+    \pgfmathparse{int(random(1,5))}%
+    \let\temp=\pgfmathresult%
+    \ifnum\temp=1 2\else%
+    \ifnum\temp=2 3\else%
+    \ifnum\temp=3 5\else%
+    \ifnum\temp=4 7\else%
+    \ifnum\temp=5 11\else%
+    \ifnum\temp=6 13\else%
+    \ifnum\temp=7 17\else%
+    \ifnum\temp=8 19\fi\fi\fi\fi\fi\fi\fi\fi%
+}
+
+% Define randbetween(2,9) - generate a random number between 2 and 9
+\newcommand{\randbetween}{%
+    \pgfmathtruncatemacro{\temp}{random(2,9)}\temp
+}
+
+
+
+
+
+
+\begin{document}
+\section*{Expand two binomials in x    \quad  Students Name_ \underline{\hspace{5cm}}}
+\begin{questions}
+\LARGE
+
+% Question 1: Generating random binomials and coefficients
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \(     (x + \randprime)    ( x + \randprime)       \)   \ps
+    \part  \(     (x + \randprime)    ( x + \randprime)       \)   \ps
+   % \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+\end{parts}
+\end{multicols}
+\qs
+
+
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \(     (x - \randprime)    ( x - \randprime)       \)   \ps
+    \part  \(     (x - \randprime)    ( x - \randprime)       \)   \ps
+   % \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+    \part  \(     (x + \randprime)    ( x - \randprime)       \)   \ps
+    \part  \(     (x - \randprime)    ( x + \randprime)       \)   \ps
+   % \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+
+    \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+   \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+   % \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   \ps
+
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+
+   \part  \(     (3 x - \randprime)    (11 x - \randprime)       \)   \ps
+   \part  \(     (\randprime x - \randprime)    (\randprime x - \randprime)       \)   \ps
+      % \part  \(     (\randprime x - \randprime)    (\randprime x - \randprime)       \)   \ps
+\end{parts}
+\end{multicols}
+\qs
+
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     (\randprime x + \randprime)    (\randprime x - \randprime)       \)   \ps
+   \part  \(     (\randprime x + \randprime)    (\randprime x - \randprime)       \)   \ps
+      % \part  \(     (\randprime x + \randprime)    (\randprime x - \randprime)       \)   \ps
+\end{parts}
+\end{multicols}
+\qs
+\newpage
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     ( x + 1)    (\randprime x + \randprime)       \)  
+   \part  \(     (\randprime x + \randprime)   ( x + 1)         \)  
+\end{parts}
+\end{multicols}
+\qs
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     (\randprime x + 1)    (x + \randprime)       \)  
+   \part  \(     ( x + \randprime)    (\randprime x + 1)           \)  
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     (\randprime x - 1)    (x - \randprime)       \)  
+   \part  \(     ( x - \randprime)    (\randprime x - 1)           \)  
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     (\randprime x + 1)    (x- \randprime)       \)  
+   \part  \(     ( x - \randprime)    (\randprime x + 1)           \)  
+\end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\begin{parts}
+   \part  \(     (7 x - 1)    (x + 4)       \)  
+   \part  \(     ( x + 2)    (\randprime x - 1)           \)  
+\end{parts}
+\end{multicols}
+\qs
+
+
+
+
+
+
+\small
+
+\question Homework
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{4}
+\begin{parts}
+    \part  \(     (x + \randprime)    ( x + \randprime)       \)   
+    \part  \(     (x + \randprime)    ( x + \randprime)       \)   
+    \part  \(     (x - \randprime)    ( x - \randprime)       \)   
+    \part  \(     (x - \randprime)    ( x - \randprime)       \)   
+    \part  \(     (x + \randprime)    ( x - \randprime)       \)   
+    \part  \(     (x - \randprime)    ( x + \randprime)       \)   
+    \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   
+   \part  \(     (\randprime x + \randprime)    (\randprime x + \randprime)       \)   
+   \part  \(     (\randprime x - \randprime)    (\randprime x - \randprime)       \)   
+   \part  \(     (\randprime x - \randprime)    (\randprime x - \randprime)       \)      
+   \part  \(     (\randprime x + \randprime)    (\randprime x - \randprime)       \)   
+   \part  \(     (\randprime x + \randprime)    (\randprime x - \randprime)       \)   
+   \part  \(     ( x + 1)    (\randprime x + \randprime)       \)  
+   \part  \(     (\randprime x + \randprime)   ( x + 1)         \)  
+   \part  \(     (\randprime x + 1)    (x + \randprime)       \)  
+   \part  \(     ( x + \randprime)    (\randprime x + 1)           \)  
+
+   \part  \(     (\randprime x - 1)    (x - \randprime)       \)  
+   \part  \(     ( x - \randprime)    (\randprime x - 1)           \)  
+
+   \part  \(     (\randprime x + 1)    (x- \randprime)       \)  
+   \part  \(     ( x - \randprime)    (\randprime x + 1)           \)  
+
+   \part  \(     (7 x - 1)    (x + 4)       \)  
+   \part  \(     ( x + 2)    (\randprime x - 1)           \)  
+\end{parts}
+\end{multicols}
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,162 @@
+% worksheet name
+\documentclass[12pt, a4paper, addpoints]{exam}
+
+\title{The derivative  of a function}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+% \author{Mr Downes}
+\newcommand{\ts}{\vspace{6 mm}}
+\newcommand{\ms}{\vspace{11 mm}}
+\newcommand{\bs}{\vspace{22mm}}
+\newcommand{\ls}{\vspace{33 mm}}
+\newcommand{\hs}{\vspace{44 mm}}
+\usepackage{array}     % For centering text vertically
+\usepackage{graphicx}  % For rotating text
+
+\date{}
+\begin{document}
+% Adjust vertical spacing before and after the title
+
+\maketitle
+\vspace{-28mm}
+% \section{Calculations using powers  $a^p$  and $a^q$ }
+ % \huge
+
+
+
+\begin{questions}
+
+
+
+\question Learning intentions: Recall, understand and apply the following:
+
+% \begin{multicols}{2}
+\begin{parts}
+
+\part Find first and second derivatives of linear, quadratic, and cubic functions by rule.
+\part Associate derivatives with slopes and tangent lines.
+% \part Apply differentiation to:
+%   \begin{itemize}
+%       \item  Rates of change.
+%       \item Maxima and minima.
+%       \item  Curve sketching.
+%   \end{itemize}
+
+\begin{tabular}{|c|c|}
+\hline
+$f(x)$ & $f'(x)$ \\ 
+\hline
+$x^n$ & $nx^{n-1}$ \\ 
+\hline
+\end{tabular}
+
+
+\end{parts}
+% \end{multicols}
+
+\large
+
+
+
+
+
+
+\question Find the derivative $\dfrac{dy}{dx}$ for the following curves.
+\setlength{\columnsep}{11pt}
+\begin{multicols}{4}
+\begin{parts}\Large
+    \part $y=7x$
+    \part $y=4x + 3$
+    \part $y=ax +b$
+    \part $y=-6x -11$
+   
+    % \part $y=0.5x - 4$
+\end{parts}
+\end{multicols}
+
+\ts
+
+
+\question Find the derivative $\dfrac{dy}{dx}$ for the following quadratic curves.
+\setlength{\columnsep}{11pt}
+\begin{multicols}{5}
+\begin{parts}\Large
+    \part $y=x^2$
+    \part $y=7x^2$
+    \part $y=-x^2$
+    \part $y=-ax^2$
+\part $y=7^2$
+\end{parts}
+\end{multicols}
+
+\ts
+
+
+\question Find the derivative $f'(x)$ for the following cubic functions.
+\setlength{\columnsep}{11pt}
+\begin{multicols}{4} \Large
+\begin{parts}
+    \part $f(x)=x^3$
+    \part $f(x)=5x^3$
+    \part $f(x)=-x^3$
+    \part $f(x)=ax^3$
+    % \part $f(x)=-7x^3$
+\end{parts}
+\end{multicols}
+\ms 
+\question Find the derivative $\dfrac{dy}{dx}$ for the following cubic functions.
+\setlength{\columnsep}{7pt}
+\begin{multicols}{2}
+\begin{parts}\Large
+    \part $y = 7x^3 - 3x^2 + 9x - 3$\ms
+    \part $y = 5x^3 + 4x^2 - 6x + 1$\ms
+    \part $y = -x^3 + 2x^2 - x+3 $ \ms
+    \part $y = ax^3 + bx^2 + cx + d$\ms
+    \part $y = -3x^3 + 6x^2 - 5x + 4$\ms
+    \part $y = 2x^3 - 7x^2 + 3x - 9$\ms
+\end{parts}
+\end{multicols}
+\ms
+\newpage
+\question Find the equation of the tangent line to the following quadratic functions at the given point.
+\setlength{\columnsep}{7pt}
+% \begin{multicols}{1}
+\begin{parts}\Large
+    \part $y = x^2 + 3x + 2$ at the point $(1, 6)$ \ms
+    \part $y = 2x^2 - 4x + 1$ at the point $(2, 1)$ \ms
+    \part $y = -x^2 + 5x - 4$ at the point $(0, -4)$ \ms
+    \part $y = 3x^2 + 2x - 5$ at the point $(-1, -6)$ \ms
+    \part $y = -2x^2 + 4x + 3$ at the point $(1, 5)$ \ms
+    \part $y = x^2 - x - 1$ at the point $(3, 5)$ \ms
+\end{parts}
+% \end{multicols}
+\ms
+
+\question Find the equation of the tangent line to the following cubic functions at the given point.
+
+\begin{parts}\Large
+    \part $y = x^3 + 2x^2 - x + 1$ at the point $(1, 3)$ \ms
+    \part $y = 2x^3 - 3x^2 + 5x - 2$ at the point $(0, -2)$ \ms
+    \part $y = -x^3 + 4x^2 - 2x + 3$ at the point $(1, 4)$ \ms
+    \part $y = 3x^3 - x^2 + 2x - 1$ at the point $(2, 19)$ \ms
+    \part $y = -2x^3 + 5x^2 - x + 2$ at the point $(1, 4)$ \ms
+\end{parts}
+\ms
+
+
+
+
+\end{questions}
+
+
+\end{document}

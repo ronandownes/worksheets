@@ -1,0 +1,63 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[ddmmyy, useregional]{datetime}
+\usepackage{amsmath, array, booktabs, multicol, pgfplots, tabularx, pgfmath, xcolor, mdframed}
+
+% Geometry settings for consistent margins
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\pagestyle{empty}
+
+% Document Metadata
+\title{\large 
+
+% Title here
+\\ \dayofweekname{\day}{\month}{\year} \today \\ \vspace{2mm} \quad Student's Name: \underline{\hspace{8cm}}}
+\date{}
+
+\input{SimLineLine/newcommands}
+
+% Begin Document
+\begin{document}
+\maketitle
+
+\LARGE
+\noindent 
+
+
+% Instruction Frame
+\begin{mdframed}[backgroundcolor=gray!10]
+    \begin{multicols}{2}
+        \large
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{multicols}
+\end{mdframed}
+
+% Table of Contents
+   \LARGE
+% \begin{multicols}{2}
+    \tableofcontents
+% \end{multicols}
+\newpage
+
+% Questions Section
+\begin{questions}
+    \addcontentsline{toc}{section}{
+    
+    }
+    \input{
+    
+    }
+ \newpage
+
+
+    \input{
+    
+    }
+ \newpage
+
+
+  
+\end{questions}
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{ifthen}
+
+\newcommand{\righttriangle}[3]{
+    \begin{tikzpicture}
+    \LARGE
+        % Calculate the missing side if hypotenuse is provided
+        \ifthenelse{\equal{#3}{}}{%
+            \def\missingSide{#2} % Use the provided height as the missing side
+        }{%
+            \pgfmathsetmacro{\missingSide}{sqrt(#3^2 - #1^2)} % Calculate the missing side using the hypotenuse
+        }
+
+        % Draw the right triangle
+        \draw[thick] (0, 0) -- (#1, 0) -- (0, \missingSide) -- cycle;
+
+        % Mark the right angle
+        \draw (0, 0) rectangle (0.3, 0.3);
+
+        % Label the sides
+        \draw (#1/2, -0.3) node[below] {#1};        % label the base
+        \draw (-0.3, \missingSide/2) node[left] {#2};  % label the height or missing side
+        \draw (#1/2, \missingSide/2) node[right] {#3}; % label the hypotenuse or missing side
+    \end{tikzpicture}
+}
+
+\begin{document}
+% Example usage:
+\righttriangle{7}{s}{25} % Here, 's' is the height, and '13' is the hypotenuse.
+\end{document}

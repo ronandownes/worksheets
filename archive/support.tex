@@ -1,0 +1,24 @@
+\newcommand{\support}[1]{% #1=grid size
+\begin{tikzpicture}
+    % Draw a grid with size specified by #1 x #1
+    \draw[step=1cm, gray, very thin] (0,0) grid (#1,#1);
+    
+    % Generate starting point
+    \pgfmathsetmacro{\xstart}{random(1,#1-1)}
+    \pgfmathsetmacro{\ystart}{random(1,#1)}
+    
+    % Generate ending point ensuring non-zero slope (avoid horizontal and vertical lines)
+    \pgfmathsetmacro{\xend}{\xstart + random(1,#1-\xstart)} % Ensures \xend > \xstart to avoid vertical line
+    \pgfmathsetmacro{\yend}{random(1,#1)}
+    \whileif{\yend == \ystart}{ % Re-roll if \yend == \ystart to avoid horizontal line
+        \pgfmathsetmacro{\yend}{random(1,#1)}
+    }
+    
+    % Draw the line segment
+    \draw[black, thick] (\xstart,\ystart) -- (\xend,\yend);
+    
+    % Add endpoints
+    \filldraw [black] (\xstart,\ystart) circle (2pt);
+    \filldraw [black] (\xend,\yend) circle (2pt);
+\end{tikzpicture}
+}

@@ -1,0 +1,202 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\pagestyle{empty} % Suppress page numbers
+
+\usepackage[margin=15mm]{geometry} % Set all margins to 15mm
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\usepackage[margin=15mm]{geometry}
+% Define the \expandbinomials command
+\input{commands}
+
+\newcommand{\verticalspace}{\vspace{26mm}} % Default to 1mm spacing
+
+
+
+\begin{document}
+\section{Factor and solve  $Ax^2 + Bx +C$ } 
+
+\begin{questions}
+\Large
+
+\question   $B=A+C$ 
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+
+
+
+\part \expandbinomials{1}{1}
+{2}{3}  
+\verticalspace
+
+\part \expandbinomials{1}{1}
+{2}{5} 
+\verticalspace
+
+\part \expandbinomials{1}{1}
+{2}{7}
+\verticalspace
+\end{multicols}
+\end{parts}
+\verticalspace
+
+
+\question   $B=-(A+C)$ 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{1}{-1}
+{3}{-7} 
+\verticalspace
+\part \expandbinomials{1}{-1}
+{3}{-11}
+\verticalspace
+\part \expandbinomials{1}{-1}
+{3}{-13}
+\verticalspace
+% \part \expandbinomials{1}{1}{7}{13} 
+% \part \expandbinomials{1}{1}{11}{13}
+\end{parts}
+\end{multicols}
+
+
+\question   $B=AC+1$ 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{1}{2}{3}{1} \verticalspace
+\part \expandbinomials{1}{5}{7}{1} \verticalspace
+\part \expandbinomials{1}{3}{11}{1} \verticalspace
+\end{parts}
+\end{multicols}
+
+\question   $B=-(AC+1)$ 
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \expandbinomials{1}{-5}{3}{-1} \verticalspace
+\part \expandbinomials{1}{-2}{7}{-1} \verticalspace
+\part \expandbinomials{1}{-3}{11}{-1} \verticalspace
+
+\end{parts}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+% 
+% \question Monic or $x^2$  quadratic negative constant trivial case. 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{1}{1}{1}{-7}  \verticalspace
+% \part \expandbinomials{1}{1}{1}{-6} \verticalspace
+% \part \expandbinomials{1}{1}{1}{5} \verticalspace
+% \part \expandbinomials{1}{1}{1}{-7} \verticalspace
+% \part \expandbinomials{1}{1}{1}{3} \verticalspace
+% \part \expandbinomials{1}{1}{1}{13} \verticalspace
+% \part \expandbinomials{1}{-1}{1}{11} \verticalspace
+% \part \expandbinomials{1}{-1}{1}{13} \verticalspace
+% \part \expandbinomials{1}{-1}{1}{13}\verticalspace
+% \end{parts}
+% \end{multicols}
+
+% % \newpage
+
+
+
+% \question Trivial  ($x^2 +Bx +C$ )   case. 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{1}{1}{1}{17}  \vspace{25mm}
+% \part \expandbinomials{1}{1}{1}{19} \vspace{25mm}
+%  \part \expandbinomials{1}{1}{1}{20} \vspace{25mm}
+% % \part \expandbinomials{1}{1}{1}{29} 
+
+% \end{parts}
+% \end{multicols}
+% \vspace{25mm}
+
+
+
+% \question Trivial  ($Ax^2 +Bx +1$ )   case. 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{5}{1}{1}{1}  \vspace{25mm}
+% \part \expandbinomials{16} {1}{1}{1}\vspace{25mm}
+% \part \expandbinomials{40}{1}{1}{1} \vspace{25mm}
+% % \part \expandbinomials{59} {1}{1}{1}
+
+% \end{parts}
+% \end{multicols}
+% \vspace{25mm}
+
+% \question Trivial  ($Ax^2 /pm Bx -1$ )   case.
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{5}{1}{1}{-1}  \vspace{35mm}
+% \part \expandbinomials{11}{-1}{1}{1} \vspace{35mm}
+% \part \expandbinomials{42}{1}{1}{-1}  \vspace{35mm}
+% % \part \expandbinomials{8}{1}{1}{-1} \vspace{35mm}
+% \end{parts}
+% \end{multicols}
+% \newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \question Simplest  $x^2$ with negative constant case in where improper factors are needed? 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{1}{1}{1}{-7}  \verticalspace
+% \part \expandbinomials{1}{1}{1}{-6} \verticalspace
+% \part \expandbinomials{1}{1}{1}{-30} \verticalspace
+% \part \expandbinomials{1}{1}{1}{-37} \verticalspace
+
+% \end{parts}
+% \end{multicols}
+
+
+% \question  Simplest case for $-1$ constant. 
+% \setlength{\columnsep}{20pt}
+% \begin{multicols}{3}
+% \begin{parts}
+% \part \expandbinomials{5}{1}{1}{-1}  \verticalspace
+% \part \expandbinomials{11}{-1}{1}{1} \verticalspace
+% \part \expandbinomials{42}{1}{1}{-1}  \verticalspace
+% \part \expandbinomials{8}{1}{1}{-1} \verticalspace
+
+% \end{parts}
+% \end{multicols}
+% \newpage
+
+
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol} % For multi-column layout
+\usepackage{mdframed} % For framed boxes
+
+\newcommand{\elimination}[6]{%
+    % Calculate constants c and p for the equations based on given intersection point (#1,#2)
+    \pgfmathsetmacro{\cval}{#3*#1 + #4*#2} % c = a*x + b*y
+    \pgfmathsetmacro{\pval}{#5*#1 + #6*#2} % p = d*x + e*y
+
+    % Format terms for a better layout, omitting "1" and aligning signs
+    \def\formata{%
+        \ifnum#3=1
+            x
+        \else\ifnum#3=-1
+            -x
+        \else
+            \pgfmathprintnumber{#3}x
+        \fi\fi}
+
+    \def\formatb{%
+        \ifnum#4=1
+            +y
+        \else\ifnum#4=-1
+            -y
+        \else
+            \ifnum#4<0 \pgfmathprintnumber{#4}y \else +\pgfmathprintnumber{#4}y \fi
+        \fi\fi}
+
+    \def\formatd{%
+        \ifnum#5=1
+            x
+        \else\ifnum#5=-1
+            -x
+        \else
+            \pgfmathprintnumber{#5}x
+        \fi\fi}
+
+    \def\formate{%
+        \ifnum#6=1
+            +y
+        \else\ifnum#6=-1
+            -y
+        \else
+            \ifnum#6<0 \pgfmathprintnumber{#6}y \else +\pgfmathprintnumber{#6}y \fi
+        \fi\fi}
+
+    % Display aligned equations
+    $\left\{ \begin{aligned}
+    \formata \formatb &= \pgfmathprintnumber{\cval} \\[-1pt]
+    \formatd \formate &= \pgfmathprintnumber{\pval}
+    \end{aligned} \right.$
+}
+
+
+\begin{document}
+
+\section*{Simultaneous Equations using Elimination}
+
+% Explanation about elimination in a framed box
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+\textbf{Elimination Method:} To solve simultaneous equations using elimination, first eliminate one of the variables by adding  the equations. After finding the value of one variable, substitute it back into one of the original equations to find the other variable. The solution is the point where both lines intersect.
+\end{mdframed}
+\large
+% Define the question with two columns
+\begin{questions}
+
+\question Solve these pairs of simultaneous equations using elimination:
+\begin{multicols}{3} % Start two-column layout
+\begin{parts}
+
+\part \elimination{2}{3}{3}{1}{5}{-1} % Positive single-digit solution expected
+\part \elimination{3}{2}{4}{1}{6}{-1} % Positive single-digit solution expected
+\part \elimination{1}{4}{2}{1}{5}{-1} % Positive single-digit solution expected
+\part \elimination{2}{5}{3}{1}{4}{-1} % Positive single-digit solution expected
+\part \elimination{1}{2}{5}{1}{3}{-1} % Positive single-digit solution expected
+\part \elimination{2}{1}{4}{1}{6}{-1} % Positive single-digit solution expected
+
+\end{parts}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+\question Solve these pairs of simultaneous equations using elimination:
+\begin{multicols}{3} % Start two-column layout
+\begin{parts}
+
+\part \elimination{2}{3}{3}{4}{5}{-4} % Expected positive single-digit solution
+\part \elimination{3}{1}{2}{5}{6}{-3} % Example pair with positive single-digit solution
+\part \elimination{1}{2}{4}{1}{2}{-1} % Example pair
+\part \elimination{2}{2}{3}{2}{1}{-1} % Example pair
+\part \elimination{1}{3}{5}{1}{4}{-1} % Example pair
+\part \elimination{2}{1}{3}{2}{5}{-2} % Example pair
+
+\end{parts}
+\end{multicols}
+
+\question Solve these pairs of simultaneous equations using elimination:
+\begin{multicols}{3} % Start two-column layout
+\begin{parts}
+
+\part \elimination{4}{3}{3}{2}{2}{-1} % Solutions: x=4, y=3
+\part \elimination{5}{2}{4}{3}{3}{-1} % Solutions: x=5, y=2
+\part \elimination{2}{4}{5}{1}{3}{-1} % Solutions: x=2, y=4
+\part \elimination{3}{1}{3}{2}{1}{-1} % Solutions: x=3, y=1
+\part \elimination{6}{2}{3}{4}{2}{-1} % Solutions: x=6, y=2
+\part \elimination{1}{5}{2}{1}{3}{-1} % Solutions: x=1, y=5
+
+\end{parts}
+\end{multicols}
+
+
+\end{questions}
+
+\end{document}

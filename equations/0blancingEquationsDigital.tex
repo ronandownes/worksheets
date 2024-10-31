@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\pagestyle{empty} 
+\usepackage[ddmmyy, useregional]{datetime}
+\title{\large Isolating x with inverse operations    \\ \dayofweekname{\day}{\month}{\year} \today \\\vspace{2mm} \quad  Students Name \underline{\hspace{8cm}}}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{pgfplots} % For graphing
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\pagestyle{empty}
+
+% Custom spacing
+\newcommand{\ps}{\vspace{1 mm}}
+\newcommand{\ts}{\vspace{45 mm}}
+\newcommand{\ms}{\vspace{55 mm}}
+\newcommand{\bs}{\vspace{25mm}}
+\newcommand{\ls}{\vspace{35 mm}}
+\newcommand{\hs}{\vspace{45 mm}}
+
+\newcommand{\monicquad}[2]{x^2 - (#1 + #2)x + #1#2}
+\newcommand{\cubicwithtps}[3]{
+    \pgfmathtruncatemacro{\a}{3*#1}  % x^2 term (after integration and multiplying by 6)
+    \pgfmathtruncatemacro{\b}{6*#2}  % x term (after integration and multiplying by 6)
+
+    $y = 2x^3 
+    \ifnum\a>0 + \a x^2 \else \a x^2 \fi 
+    \ifnum\b>0 + \b x \else \b x \fi 
+    \ifnum#3>0 + #3 \else #3 \fi$
+}
+\usepackage{mdframed}
+\date{}
+\begin{document}
+\thispagestyle{empty} 
+
+\maketitle
+
+\LARGE 
+
+\noindent 
+In todays class we use the concept of inverse operations  to improve your fluency, enrich  your knowledge and deepen your understanding of finding and applying solutions to linear equations. Check your answers.
+
+
+\begin{questions}
+
+
+
+\begin{mdframed}[backgroundcolor=gray!10] % Light grey background
+% \textbf{Learning Intentions and keywords:}
+\LARGE
+\setlength{\columnsep}{1pt}
+\thispagestyle{empty} 
+\begin{itemize}
+\item  Inverse operation of addition is subtraction
+\item Inverse operation  of  subtraction is addition
+\item Inverse operation  of multiplication is division
+\item Inverse operation  of division  is multiplication
+\item Priority of operations in reverse
+\item Check all your answers in original equation 
+\item Check your answers with your learning partner
+\item improve your fluency \item  enrich  your knowledge \item  deepen your understanding  \item  finding and applying solutions to linear equations.
+
+\end{itemize}
+\end{mdframed}
+\tableofcontents
+\Large
+\newpage
+\input{equations/1Subtraction}\newpage
+\input{equations/2addition}\newpage
+\input{equations/3division}\newpage
+\input{equations/4multiply}\newpage
+\input{equations/4homeworkdigital}\newpage 
+\input{equations/5addsubtraact}\newpage
+\input{equations/6multistep}\newpage
+\input{equations/7expand}\newpage
+\input{equations/8add_divide}\newpage
+\input{equations/9DivideAddDivide   }\newpage
+\input{equations/10Revision    }\newpage
+\input{equations/11_subtract_terms_both_sides    }\newpage
+\input{equations/12_subtract_add_terms_both_sides    }\newpage
+\input{equations/13_expand_simplify_brackets    }\newpage
+\input{equations/14_mixed_operations_solve   }\newpage
+\input{equations/15_homework_part_11_to_14   }\newpage
+% \input{equations/1   }\newpage
+
+\end{questions}
+
+\end{document}

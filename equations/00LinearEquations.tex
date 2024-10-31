@@ -1,0 +1,115 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[ddmmyy, useregional]{datetime}
+\usepackage{amsmath, array, booktabs, multicol, pgfplots, tabularx, pgfmath, xcolor, mdframed}
+
+% Geometry
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\pagestyle{empty}
+
+% Document Metadata
+\title{\large Isolating \( x \) with Inverse Operations \\ \dayofweekname{\day}{\month}{\year} \today \\ \vspace{2mm} \quad Student's Name: \underline{\hspace{8cm}}}
+\date{}
+
+% Custom Spacing Commands
+\newcommand{\as}{\vspace{0 mm}}
+\newcommand{\bs}{\vspace{1 mm}}
+\newcommand{\cs}{\vspace{2 mm}}
+\newcommand{\ds}{\vspace{3 mm}}
+\newcommand{\es}{\vspace{8 mm}}
+\newcommand{\fs}{\vspace{10 mm}}
+\newcommand{\gs}{\vspace{15 mm}}
+\newcommand{\hs}{\vspace{20 mm}}
+\newcommand{\is}{\vspace{25 mm}}
+\newcommand{\js}{\vspace{30 mm}}
+\newcommand{\ks}{\vspace{40 mm}}
+\newcommand{\ls}{\vspace{50 mm}}
+\newcommand{\ms}{\vspace{55 mm}}
+\newcommand{\ns}{\vspace{60 mm}}
+\newcommand{\os}{\vspace{65 mm}}
+\newcommand{\ps}{\vspace{75 mm}}
+\newcommand{\qs}{\vspace{85 mm}}
+\newcommand{\rs}{\vspace{95 mm}}
+
+% Begin Document
+\begin{document}
+\maketitle
+
+\LARGE
+\noindent 
+In this unit of learning, we use inverse operations to improve fluency, enrich knowledge, and deepen understanding of solving linear equations. Check your answers.
+
+% Instruction Frame
+\begin{mdframed}[backgroundcolor=gray!10]
+    \begin{multicols}{2}
+        \large
+        \begin{itemize}
+            \item Inverse operation of addition is subtraction
+            \item Inverse operation of subtraction is addition
+            \item Inverse operation of multiplication is division
+            \item Inverse operation of division is multiplication
+            \item Priority of operations in reverse
+            \item Check all answers in the original equation 
+            \item Review answers with a learning partner
+            \item Aim to improve fluency, enrich knowledge, and apply solutions to linear equations.
+        \end{itemize}
+    \end{multicols}
+\end{mdframed}
+
+% Table of Contents
+\small
+\begin{multicols}{2}
+    \tableofcontents
+\end{multicols}
+\newpage
+
+% Questions Section
+\begin{questions}
+    \Large
+    % Adding sections for each equation type, with file inputs
+    \addcontentsline{toc}{section}{Subtraction Equations}
+    \input{equations/1Subtraction}\newpage
+
+    \addcontentsline{toc}{section}{Addition Equations}
+    \input{equations/2addition}\newpage
+
+    \addcontentsline{toc}{section}{Division Equations}
+    \input{equations/3division}\newpage
+
+    \addcontentsline{toc}{section}{Multiplication Equations}
+    \input{equations/4multiply}\newpage
+
+    \addcontentsline{toc}{section}{Add and Subtract Equations}
+    \input{equations/5addsubtraact}\newpage
+
+    \addcontentsline{toc}{section}{Multi-step Equations}
+    \input{equations/6multistep}\newpage
+
+    \addcontentsline{toc}{section}{Expand Equations}
+    \input{equations/7expand}\newpage
+
+    \addcontentsline{toc}{section}{Addition and Division Equations}
+    \input{equations/8add_divide}\newpage
+
+    \addcontentsline{toc}{section}{Divide, Add, Divide Equations}
+    \input{equations/9DivideAddDivide}\newpage
+
+    \addcontentsline{toc}{section}{Revision}
+    \input{equations/10Revision}\newpage
+
+    \addcontentsline{toc}{section}{Subtract Terms on Both Sides}
+    \input{equations/11_subtract_terms_both_sides}\newpage
+
+    \addcontentsline{toc}{section}{Subtract and Add Terms on Both Sides}
+    \input{equations/12_subtract_add_terms_both_sides}\newpage
+
+    \addcontentsline{toc}{section}{Expand and Simplify Brackets}
+    \input{equations/13_expand_simplify_brackets}\newpage
+
+    \addcontentsline{toc}{section}{Mixed Operations Equations}
+    \input{equations/14_mixed_operations_solve}\newpage
+
+    \addcontentsline{toc}{section}{Homework for Parts 11 to 14}
+    \input{equations/15_homework_part_11_to_14}\newpage
+\end{questions}
+
+\end{document}

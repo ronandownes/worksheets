@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+
+% Randomize seed using the current time
+\pgfmathsetseed{2}
+\newcommand{\ps}{\vspace{36mm}}
+% Define commands for different expansions
+
+
+
+% Monicpositivefactor lead, Nonmonicpositivefactor trail
+\newcommand{\uggg}{%
+    \pgfmathtruncatemacro{\a}{random(2,9)} % Random non-monic coefficient for a
+    \pgfmathtruncatemacro{\b}{random(2,9)} % Random constant for monic
+    \pgfmathtruncatemacro{\c}{random(1,9)} % Random constant for non-monic
+    \edef\result{(x + \b)(\a x + \c)}%
+    \result
+}
+
+
+
+
+
+\begin{document}
+
+\section*{Expand and Break Down Using FOIL}
+\quad Student's Name: \underline{\hspace{5cm}}
+
+\begin{questions}
+\LARGE
+
+% Question 1: Monic Positive Lead, Non-Monic Positive Trail
+\question
+uggg
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+    \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+           \part \( \uggg \)
+    \ps
+           \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+       \part \( \uggg \)
+    \ps
+
+\end{parts}
+\end{multicols}
+
+
+\end{questions}
+
+\end{document}

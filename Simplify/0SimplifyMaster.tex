@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[ddmmyy, useregional]{datetime}
+\usepackage{amsmath, array, booktabs, multicol, pgfplots, tabularx, pgfmath, xcolor, mdframed}
+
+% Geometry settings for consistent margins
+\usepackage[top=5mm, bottom=20mm, left=11mm, right=11mm]{geometry}
+\pagestyle{empty}
+
+% Document Metadata
+\title{\large 
+% Simplifying Expressions in Algebra
+% Title here
+ \dayofweekname{\day}{\month}{\year} \today  \vspace{2mm} \quad Name: \underline{\hspace{8cm}}}
+\date{}
+
+\input{Simplify/newcommands}
+
+% Begin Document
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\vspace{-11mm}
+% \LARGE
+% \noindent 
+
+
+% % Instruction Frame
+% \begin{mdframed}[backgroundcolor=gray!10]
+%     \begin{multicols}{2}
+%         \large
+%         \begin{itemize}
+%             \item Group and simplify like terms
+%             \item Distribute Multiplication 
+%         \end{itemize}
+%     \end{multicols}
+% \end{mdframed}
+% % Table of Contents
+%    \LARGE
+% % \begin{multicols}{2}
+%     \tableofcontents
+% % \end{multicols}
+% \newpage
+
+% Questions Section
+\begin{questions}
+\Large
+\input{Simplify/1simplify_like_terms}
+\input{Simplify/2_simplify_unlike_terms}
+\input{Simplify/3remove_brackets_simplify}
+\input{Simplify/4substitute_values}
+\input{Simplify/5simplify_and_substitute}
+\input{Simplify/6further_practice_part1}
+\input{Simplify/7further_practice_part2}
+% \input{Simplify/2remove_brackets_simplify}
+\newpage
+\end{questions}
+\end{document}

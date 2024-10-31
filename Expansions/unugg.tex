@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+\newcommand{\gap}{\vspace{15mm}}
+\newcommand{\Gap}{\vspace{38mm}}
+\newcommand{\GAP}{\vspace{66mm}}
+% Randomize seed using the current time
+\pgfmathsetseed{1}
+\newcommand{\Gap}{\vspace{36mm}}
+% Define commands for different expansions
+
+
+
+% Monicpositivefactor lead, Nonmonicpositivefactor trail
+\newcommand{\unugg}{%
+    \pgfmathtruncatemacro{\a}{random(2,9)} 
+    \pgfmathtruncatemacro{\b}{random(2,9)} 
+      \pgfmathtruncatemacro{\c}{random(2,9)} 
+    \edef\result{(x - \c)(\b x +\a)}%
+    \result
+}
+
+
+
+
+
+\begin{document}
+
+\section*{unugg  FOIL expansions  \quad Student's Name: \underline{\hspace{5cm}}} 
+
+
+\begin{questions}
+\LARGE
+
+% Question 1: Monic Positive Lead, Non-Monic Positive Trail
+\question
+\gap
+  
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+
+\begin{parts}
+    \part \( \unugg \)
+      \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+           \part \( \unugg \)
+    \Gap
+           \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+       \part \( \unugg \)
+    \Gap
+\end{parts}
+\end{multicols}
+\gap
+What pattern is common to all these questions and how can you decribe the output?
+
+\end{questions}
+
+\end{document}

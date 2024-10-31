@@ -1,0 +1,172 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+% \documentclass[addpoints,answers]{exam}
+
+\input{preamble}
+\begin{document}
+
+\input{labelslope}
+\input{gridslope}
+\input{slopetool}
+\input{linesegment}
+
+\pgfmathsetseed{\number\pdfrandomseed}
+% \pointsonrightmargin
+% \nopointsinmargin 
+
+% Redefine the point display command to show nothing next to the question
+% \renewcommand{\pointformat}{}
+
+\begin{minipage}[t]{0.2\textwidth} 
+  % \includegraphics[width=1\lineswidth]{images/logo.jpg}\hspace{17mm}
+   \qrcode[height=30mm]{https://www.geogebra.org/m/bdcutx2w#chapter/1044119} 
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth} 
+\vspace{-16mm}
+{\huge 
+   {\LARGE\textbf{Positive Slopes on a Grid
+}\\
+   Learn by Doing \\
+QR for Slope Chapter \\
+   \today}
+   }  
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth} 
+   % \includegraphics[width=\linewidth]{images/logo.jpg}
+\end{minipage}
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+ \textbf{Slope} is the \textit{steepness} of a line segment. It measures how much a line rises vertically between two points in a horizontal run. We learn to use a \textbf{slope triangle}  to calculate slope values.
+
+There are four types of slope:Positive,  Negative, Zero and Undefined Slope.
+
+
+In this lesson, we look at \textbf{Positive Slopes}.  Line segments that rise from left to right and are also called  \textit{increasing line segments}. 
+
+To express slope mathematically, we use the formula:
+\[ \text{slope} (m) = \frac{\text{rise}}{\text{run}} \]
+
+Here, the slope is denoted by the variable letter \(m\).
+\end{mdframed}
+
+
+
+
+
+
+\begin{questions}
+
+
+
+\newcommand{\smallspace}{\vspace{1mm}}
+
+
+\question Find the slope using the rise and run?
+\begin{multicols}{3}
+\begin{parts}
+
+\part \scalebox{0.8}{\labelslope{5}{5}{0}{1}{5}{5}} 
+\part \scalebox{0.8}{\labelslope{5}{5}{2}{1}{5}{5}}
+\part \scalebox{0.8}{\labelslope{5}{5}{0}{0}{3}{1}} 
+
+\end{parts}
+\end{multicols}
+
+
+
+
+\renewcommand{\smallspace}{\vspace{4mm}}
+\question Find the slope using the rise and run?
+\begin{multicols}{3}
+\begin{parts}
+\part \slopetool{5}{5}{0}{0}{2}{5} \smallspace
+\part \slopetool{5}{5}{0}{3}{5}{5}\smallspace
+\part \slopetool{5}{5}{0}{0}{5}{1} \smallspace
+
+\end{parts}
+\end{multicols}
+
+
+\renewcommand{\smallspace}{\vspace{4mm}}
+
+
+
+
+
+
+\input{gridblank}
+
+
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+Up to now  we converted slope from a number to a graph and now we will do this backwards.
+\end{mdframed}
+
+
+
+For a slope of \(m = \frac{3}{4}\), start at \(A(0, 0)\) so you can go to the right and up.
+
+
+As a picture it looks like:  
+
+
+\begin{tikzpicture}[scale=0.8]
+    % Original graph with slope triangle labeled 3 and 4 and coordinates at (0,0)
+    \begin{scope}[shift={(0,0)}]
+        \draw[thin,gray!40] (0,0) grid (5,5);
+        \draw[<->] (0,5) -- (0,0) -- (6,0);
+        \filldraw[black] (0,0) circle(2pt) node[anchor=north] {$A(0,0)$};
+        \filldraw[black] (4,3) circle(2pt) node[anchor=south] {$B(4,3)$};
+        \draw[line width=1pt] (0,0) -- (4,3);
+        \draw[dashed] (4,0) -- (4,3) -- (0,3);
+        \draw (4,1.5) node[right] {$3$}; % Rise
+        \draw (2,0) node[below] {$4$}; % Run
+    \end{scope}
+    
+    % Modified graph with "run,rise" labeled and coordinates at (0,0)
+    \begin{scope}[shift={(8,0)}]
+        \draw[thin,gray!40] (0,0) grid (5,5);
+        \draw[<->] (0,5) -- (0,0) -- (6,0);
+        \filldraw[black] (0,0) circle(2pt) node[anchor=north] {$A(0,0)$};
+        \filldraw[black] (4,3) circle(2pt) node[anchor=south] {$B(run,rise)$};
+        \draw[line width=1pt] (0,0) -- (4,3);
+        \draw[dashed] (4,0) -- (4,3) -- (0,3);
+        \draw (4,1.5) node[right] {Rise}; % Rise
+        \draw (2,0) node[below] {Run}; % Run
+    \end{scope}
+\end{tikzpicture}
+\question 
+Construct a line segment to represent a positive slope \(m\).
+
+
+
+
+
+
+
+
+\begin{multicols}{3}
+\begin{parts}
+\part \gridblank{5}{5}{}{1}{5}
+\part \gridblank{5}{5}{}{2}{5}
+\part \gridblank{5}{5}{}{3}{5}
+\part \gridblank{5}{5}{}{4}{5}
+\part \gridblank{5}{5}{}{1}{4} 
+\part \gridblank{5}{5}{}{3}{4} 
+\part \gridblank{5}{5}{}{5}{4}
+\part \gridblank{5}{5}{}{2}{3}
+% \part \gridblank{5}{5}{}{1}{3} 
+% \part \gridblank{5}{5}{}{4}{3} 
+% \part \gridblank{5}{5}{}{5}{3}
+% \part \gridblank{5}{5}{}{1}{2}
+% \part \gridblank{5}{5}{}{3}{2}
+% \part \gridblank{5}{5}{}{5}{2}
+% \part \gridblank{5}{5}{}{0}{2}
+% \part \gridblank{5}{5}{-}{5}{4}
+% \part \gridblank{5}{5}{}{4}{2}
+\part \gridblank{5}{5}{-}{1}{2}
+\end{parts}
+\end{multicols}
+
+
+
+
+
+\end{document}

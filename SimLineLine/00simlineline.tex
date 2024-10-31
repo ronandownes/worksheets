@@ -1,0 +1,102 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{pgfmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+
+
+
+
+
+\usepackage{mdframed} % For framed boxes
+
+\newcommand{\elimination}[6]{%
+    % Calculate constants c and p for the equations based on the intersection point (#1,#2)
+    \pgfmathsetmacro{\cval}{#3*#1 + #5*#2} % c = a*x + b*y
+    \pgfmathsetmacro{\pval}{#4*#1 + #6*#2} % p = d*x + e*y
+
+    % Format terms for better readability, omitting "1" and aligning signs
+    \def\formata{%
+        \ifnum#3=1
+            x
+        \else\ifnum#3=-1
+            -x
+        \else
+            \pgfmathprintnumber{#3}x
+        \fi\fi}
+
+    \def\formatb{%
+        \ifnum#5=1
+            +y
+        \else\ifnum#5=-1
+            -y
+        \else
+            \ifnum#5<0 \pgfmathprintnumber{#5}y \else +\pgfmathprintnumber{#5}y \fi
+        \fi\fi}
+
+    \def\formatd{%
+        \ifnum#4=1
+            x
+        \else\ifnum#4=-1
+            -x
+        \else
+            \pgfmathprintnumber{#4}x
+        \fi\fi}
+
+    \def\formate{%
+        \ifnum#6=1
+            +y
+        \else\ifnum#6=-1
+            -y
+        \else
+            \ifnum#6<0 \pgfmathprintnumber{#6}y \else +\pgfmathprintnumber{#6}y \fi
+        \fi\fi}
+
+    % Display equations without the left large bracket
+    $\begin{aligned}
+    \formata \formatb &= \pgfmathprintnumber{\cval} \\[-1pt]
+    \formatd \formate &= \pgfmathprintnumber{\pval}
+    \end{aligned}$
+}
+
+% Custom spacing
+\newcommand{\as}{\vspace{0 mm}}
+\newcommand{\bs}{\vspace{1 mm}}
+\newcommand{\cs}{\vspace{2 mm}}
+\newcommand{\ds}{\vspace{3 mm}}
+\newcommand{\es}{\vspace{8 mm}}
+\newcommand{\fs}{\vspace{10 mm}}
+\newcommand{\gs}{\vspace{15 mm}}
+\newcommand{\hs}{\vspace{20 mm}}
+\newcommand{\is}{\vspace{25 mm}}
+\newcommand{\js}{\vspace{30 mm}}
+\newcommand{\ks}{\vspace{40 mm}}
+\newcommand{\ls}{\vspace{50 mm}}
+\newcommand{\ms}{\vspace{55 mm}}
+\newcommand{\ns}{\vspace{60mm}}
+\newcommand{\os}{\vspace{65 mm}}
+\newcommand{\ps}{\vspace{75 mm}}
+\newcommand{\qs}{\vspace{85mm}}
+\newcommand{\rs}{\vspace{95 mm}}
+\begin{document}
+\thispagestyle{empty} 
+\section*{Simultaneous Equations using Elimination}
+
+% Explanation about elimination in a framed box
+\begin{mdframed}[backgroundcolor=gray!20] % Light grey background
+\textbf{Elimination Method:} To solve simultaneous equations using elimination, first eliminate one of the variables by adding or subtracting the equations. After finding the value of one variable, substitute it back into one of the original equations to find the other variable. The solution is the point where both lines intersect.
+\end{mdframed}
+\Large
+\newpage
+% Define the question with two columns
+\begin{questions}
+\input{SimLineLine/1oppositeys}
+\newpage
+\input{SimLineLine/2oppositeyterms}
+\newpage
+\input{SimLineLine/3timesoneline}
+
+\end{questions}
+
+\end{document}

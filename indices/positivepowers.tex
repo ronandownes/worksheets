@@ -1,0 +1,189 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\pagestyle{empty} % Suppress page numbers
+\usepackage[margin=15mm]{geometry} % Set all margins to 15mm
+\usepackage{amsmath} % For mathematical symbols
+\usepackage{multicol} % For multi-column layout
+\usepackage{tabularx}
+\usepackage{pgfmath} % For math parsing and calculations
+\usepackage{xcolor} % For color customization
+\newcommand{\ts}{\vspace{10mm}}
+\newcommand{\ms}{\vspace{20mm}}
+\newcommand{\bs}{\vspace{30mm}}
+% Define the \expandbinomials command
+\input{commands} % Ensure that 'commands' file exists
+
+% Modified command to automatically include math mode
+\newcommand{\powerexpansiondot}[2]{%
+  \(\ensuremath{#1}\)%
+  \ifnum#2>1%
+    \repeatoperationdot{#1}{#2}%
+  \fi%
+}
+
+\newcommand{\repeatoperationdot}[2]{%
+  \ifnum#2>1%
+    \(\ensuremath{\cdot #1}\)%
+    \repeatoperationdot{#1}{\numexpr#2-1\relax}%
+  \fi%
+}
+
+\newcommand{\powerexpansiontimes}[2]{%
+  \(\ensuremath{#1}\)%
+  \ifnum#2>1%
+    \repeatoperation{#1}{#2}%
+  \fi%
+}
+
+\newcommand{\repeatoperation}[2]{%
+  \ifnum#2>1%
+    \(\ensuremath{\times #1}\)%
+    \repeatoperation{#1}{\numexpr#2-1\relax}%
+  \fi%
+}
+
+
+\newcommand{\powerexpansiondot}[2]{%
+    \ensuremath{#1^{#2}} % Formats the base raised to the power
+}
+
+\newcommand{\multiplypowers}[4]{%
+    \ensuremath{#1^{#2} \cdot #3^{#4}} % Multiplies two powers
+}
+
+\newcommand{\verticalspace}{\vspace{19mm}} 
+\begin{document}
+\LARGE
+\section*{Calculations using ...}
+\begin{equation*}
+\begin{array}{>{\displaystyle}l @{\hspace{2cm}} >{\displaystyle}l @{\hspace{2cm}} >{\displaystyle}l}
+a^p a^q = a^{p+q} &\frac{a^p}{a^q} = a^{p-q} & (a^p)^q = a^{pq} \\
+\end{array}
+\end{equation*}
+
+\begin{questions}
+\Large
+\question   Write  these repeated multiplication expressions in exponent form, $a^n$.
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \powerexpansiontimes{7}{5} 
+\part \powerexpansiontimes{6}{3} 
+% \part \powerexpansiontimes{5}{4} \ms
+% \part \powerexpansiondot{2}{2} \ms
+% \part \powerexpansiondot{a}{3}\ms
+\part \powerexpansiondot{x}{4}
+\end{parts}
+\end{multicols}
+\ts
+\question To multiply powers just add the exponents, \(a^p a^q = a^{p+q}\)
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+\part \multiplypowers{7}{3}{7}{5} \ms
+\part  \(     2\cdot 2^3               \) \ms
+\part \(  3^{2} \cdot 3^4 \cdot 3^{10}}   \)         \ms
+\part \multiplypowers{5}{a}{5}{b}\ms
+\part \multiplypowers{3}{4}{5}{6} \ms
+\part \(3^{}\cdot 3^2 \cdot3^  p \cdot     \)
+\end{parts}
+\end{multicols}
+\ms
+
+
+
+
+
+
+
+
+\question Simplify the following quotients of powers. \(\dfrac{a^p}{a^q} = a^{p-q}\)
+\setlength{\columnsep}{20pt} 
+\begin{multicols}{3}
+\begin{parts} 
+\part $\dfrac{7^5}{7^2}$ \ms
+\part $\dfrac{x^8}{x^3}$ \ms 
+\part $\dfrac{a^6}{a^4}$ \ms
+\part $\dfrac{9^7}{9^5}$ \ms
+\part $\dfrac{m^{3}}{m^{10}}}$ \ms
+\part $\dfrac{b}{b^5}$ \ms 
+\end{parts}
+\end{multicols}
+
+
+
+
+
+\question Simplify the following powers of powers. Express your answers using exponents.
+\setlength{\columnsep}{20pt} 
+\begin{multicols}{3}
+\begin{parts} 
+\part $\left( 3^4 \right)^2$ \ms
+\part $\left( x^5 \right)^3$ \ms
+\part $\left( a^2 \right)^4$ \ms
+\part $\left( 7^3 \right)^2$ \ms
+\part $\left( m^6 \right)^2$ \ms
+\part $\left( b^3 \right)^4$ 
+\end{parts}
+\end{multicols}
+
+
+\question Complete the table below by filling in the values for powers of 2 and powers of 3. Continue the pattern for exponents and fill in the missing values.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5} % Adjusts row spacing for better readability
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+\hline
+\textbf{Exponent} & \textbf{Powers of 2} & \textbf{Value} & \textbf{Powers of 3} & \textbf{Value} \\
+\hline
+9 & \(2^9\) &  & \(3^9\) &  \\
+\hline
+8 & \(2^8\) &  & \(3^8\) &  \\
+\hline
+7 & \(2^7\) &  & \(3^7\) &  \\
+\hline
+6 & \(2^6\) &  & \(3^6\) &  \\
+\hline
+5 & \(2^5\) &  & \(3^5\) & 243 \\
+\hline
+4 & \(2^4\) & 16 & \(3^4\) &  \\
+\hline
+3 & \(2^3\) & 8 & \(3^3\) &  \\
+\hline
+2 & \(2^2\) & 4 & \(3^2\) & 9 \\
+\hline
+1 & \(2^1\) &  & \(3^1\) & 3 \\
+\hline
+0 & \(2^0\) & 1 & \(3^0\) &  \\
+\hline
+-1 & \(2^{-1}\) &  & \(3^{-1}\) &  \\
+\hline
+-2 & \(2^{-2}\) &  & \(3^{-2}\) &  \\
+\hline
+\end{tabularx}
+\end{center}
+
+% \begin{itemize}
+%     \item Use the pattern of multiplying or dividing by 2 and 3 to fill in the missing values.
+%     \item What do you notice about the value of \(2^0\) and \(3^0\)?
+%     \item What happens when the exponent is negative?
+% \end{itemize}
+
+
+
+% \question Answer the following questions about exponents and powers:
+
+% \begin{parts}
+% \part Write 9 as a power of 3.
+% \part Write 16 as a power of 2.
+% \part In the expression \(5^4\), what is the base and what is the exponent?
+% \part In the expression \(2^3 = 8\), what is the exponent?
+% \part Write 81 as a power of 3.
+% \part In the expression \(4^2 = 16\), what is the base and what is the power?
+% \end{parts}
+
+
+
+\end{questions}
+
+
+\end{document}

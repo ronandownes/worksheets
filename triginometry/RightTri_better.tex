@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{xfp}  % For calculations in LaTeX
+
+% Define a new command for the right triangle
+% Arguments: {base}{height}{hypotenuse or missing side}
+\newcommand{\righttriangle}[3]{
+    \begin{tikzpicture}
+    \LARGE
+        % If one side is missing (hypotenuse or one leg), calculate using Pythagoras
+        \ifthenelse{\equal{#3}{s}}{%
+            \pgfmathsetmacro{\hypotenuse}{sqrt(#1^2 + #2^2)}
+        }{%
+            \pgfmathsetmacro{\hypotenuse}{#3}
+        }
+
+        % If the base is missing (marked with 's')
+        \ifthenelse{\equal{#1}{s}}{%
+            \pgfmathsetmacro{\base}{sqrt(#3^2 - #2^2)}
+        }{%
+            \pgfmathsetmacro{\base}{#1}
+        }
+
+        % If the height is missing (marked with 's')
+        \ifthenelse{\equal{#2}{s}}{%
+            \pgfmathsetmacro{\height}{sqrt(#3^2 - #1^2)}
+        }{%
+            \pgfmathsetmacro{\height}{#2}
+        }
+
+        % Draw the right triangle
+        \draw[thick] (0, 0) -- (\base, 0) -- (0, \height) -- cycle;
+
+        % Mark the right angle
+        \draw (0, 0) rectangle (0.3, 0.3);
+
+        % Label the sides
+        \draw (\base/2, -0.5) node[below] {\fpeval{\base}};  % Label the base
+        \draw (-0.5, \height/2) node[left] {\fpeval{\height}};  % Label the height
+        \draw (\base/2 + 0.2, \height/2) node[right] {\fpeval{\hypotenuse}};  % Label the hypotenuse
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+% Example usage
+
+% Standard right triangle with all sides known
+\righttriangle{3}{4}{5}
+
+% Right triangle with base missing, calculated using Pythagoras
+\righttriangle{s}{5}{13}
+
+% Right triangle with height missing, calculated using Pythagoras
+\righttriangle{12}{s}{13}
+
+\end{document}

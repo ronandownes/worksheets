@@ -1,0 +1,126 @@
+\documentclass[12pt, a4paper, addpoints]{exam}
+\usepackage[top=15mm, bottom=20mm, left=5mm, right=5mm]{geometry}
+\usepackage{pgfmath} % For random numbers
+\usepackage{multicol} % For multi-column layout
+\newcommand{\vs}{\vspace{26mm}}
+\newcommand{\ps}{\vspace{26mm}}
+\newcommand{\qs}{\vspace{26mm}}
+% Define random prime number from {2, 3, 5, 7, 11}
+\newcommand{\randprime}{%
+    \pgfmathtruncatemacro{\temp}{random(1,5)}%
+    \ifcase\temp 2\or 3\or 5\or 7\or 11\fi
+}
+
+
+% Define positive coefficient (1 to 11) for outside and inside the binomial
+\newcommand{\posco}{\pgfmathtruncatemacro{\temp}{random(2,11)}\temp}
+
+% Define positive binomial (ax + b) wrapped in math mode
+\newcommand{\posbin}{%
+    \pgfmathtruncatemacro{\a}{random(1,11)}%
+    \pgfmathtruncatemacro{\b}{random(1,11)}%
+    (\a x + \b)
+}
+% Define positive binomial (ax + b) wrapped in math mode, using prime coefficients
+\newcommand{\posbinp}{%
+    \pgfmathtruncatemacro{\a}{\randprime}%
+    \pgfmathtruncatemacro{\b}{\randprime}%
+    (\a x + \b)
+}
+
+\newcommand{\negbin}{%
+    \pgfmathtruncatemacro{\a}{random(1,11)}%
+    \pgfmathtruncatemacro{\b}{random(1,11)}%
+    (\a x - \b)
+}
+% Define positive quadratic (ax^2 + bx + c)
+\newcommand{\posquad}{%
+    \pgfmathtruncatemacro{\a}{random(1,11)}%
+    \pgfmathtruncatemacro{\b}{random(1,11)}%
+    \pgfmathtruncatemacro{\c}{random(1,11)}%
+   ( )\a x^2 + \b x + \c)
+}
+
+
+\newcommand{\poscubic}{%
+    \pgfmathtruncatemacro{\a}{random(1,13)}%
+    \pgfmathtruncatemacro{\b}{random(1,13)}%
+    \pgfmathtruncatemacro{\c}{random(1,13)}%
+    \pgfmathtruncatemacro{\d}{random(1,13)}%
+   ( \a x^3 + \b x^2 + \c x + \d)
+}
+
+\newcommand{\difbin}{%
+    \pgfmathtruncatemacro{\a}{random(1,13)}%
+    \pgfmathtruncatemacro{\b}{random(1,13)}%
+    (\a x - \b)
+}
+
+\newcommand{\negquad}{%
+    \pgfmathtruncatemacro{\a}{random(1,13)}%
+    \pgfmathtruncatemacro{\b}{random(1,13)}%
+    \pgfmathtruncatemacro{\c}{random(1,13)}%
+   ( \a x^2 - \b x - \c)
+}
+\newcommand{\mixedquad}{%
+    \pgfmathtruncatemacro{\a}{random(1,13)}%
+    \pgfmathtruncatemacro{\b}{random(1,13)}%
+    \pgfmathtruncatemacro{\c}{random(1,13)}%
+   ( \a x^2 - \b x + \c)
+}
+
+\begin{document}
+\randprime
+\begin{questions}
+\Large
+% Question 1: Expanding binomials
+
+\randprime
+\question
+\setlength{\columnsep}{20pt}
+\begin{multicols}{3}
+\begin{parts}
+
+    \part \(\posco   \posbin\)\ps
+    \part \(\posco   \posbin\)\ps
+        \part \(\posco   \posbin\)\ps
+    %         \part \(\posco   \posbin\)\ps
+    % \part \(\posco   \posbin\)\ps
+    %     \part \(\posco   \posbin\)\ps
+    \end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{5pt}
+\begin{multicols}{3}
+\begin{parts}
+    \part \(\posco   \negbin\)\ps
+        \part \(\posco   \negbin\)\ps
+            \part \(\posco   \negbin\)\ps
+    \end{parts}
+\end{multicols}
+\qs
+
+\question
+\setlength{\columnsep}{5pt}
+\begin{multicols}{3}
+\begin{parts}
+
+    \part \(\posbin  \posbin\)\ps
+   \part \(\posbin  \posbin\)\ps
+   \part \(\posbin  \posbin\)\ps
+      \part \(\posbin  \posbin\)\ps
+         \part \(\posbin  \posbin\)\ps
+      \part \(\posbin  \posbin\)\ps
+    %         \part \(\posco   \posbin\)\ps
+    % \part \(\posco   \posbin\)\ps
+    %     \part \(\posco   \posbin\)\ps
+    \end{parts}
+\end{multicols}
+\qs
+
+
+\end{questions}
+
+\end{document}
